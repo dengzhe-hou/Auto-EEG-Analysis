@@ -1,0 +1,217 @@
+{
+  "record_basis": [
+    "E09",
+    "E10",
+    "manuscript numerical comparisons"
+  ],
+  "counts_by_evidence_kind": {
+    "Behavioural check": 3,
+    "Cross-implementation comparison": 1,
+    "Cross-toolbox comparison": 4,
+    "Interface evidence in the retained inventory": 5,
+    "Known-input check of selected operations": 9
+  },
+  "current_qc_helper_matches_tested_revision": true,
+  "new_experiments": 0,
+  "skills": [
+    {
+      "skill": "eeg-preprocess",
+      "evidence_kind": "Cross-toolbox comparison",
+      "tested_operation": "Processing chain through ERP ROI amplitudes",
+      "reference": "MNE-BIDS-Pipeline and independent EEGLAB or FieldTrip implementations",
+      "recorded_outcome": "Tested final amplitudes meet the stated comparison criteria in the reported matched configurations",
+      "scope": "End-to-end evidence through the tested output. Filtering, reference and resampling were not separately certified",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12 , Current manuscript Results and Methods on numerical validation"
+    },
+    {
+      "skill": "eeg-epoch",
+      "evidence_kind": "Cross-toolbox comparison",
+      "tested_operation": "Epoching as part of the tested ERP processing chain",
+      "reference": "The retained ERP amplitude comparisons",
+      "recorded_outcome": "Covered through the final ERP amplitudes",
+      "scope": "Independent stage-level waveform and event-parity certification is not established by final-amplitude agreement alone",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12 , Current manuscript Results and Methods on numerical validation"
+    },
+    {
+      "skill": "eeg-erp",
+      "evidence_kind": "Cross-toolbox comparison",
+      "tested_operation": "Specified condition contrasts, channel ROIs and mean-amplitude windows",
+      "reference": "MNE-BIDS-Pipeline and matched FieldTrip comparisons",
+      "recorded_outcome": "Tested participant amplitudes meet their stated acceptance criteria",
+      "scope": "Five ERP components at the manuscript configurations. This does not establish arbitrary ROI, window or preprocessing choices",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12 , Current manuscript Results and Methods on numerical validation"
+    },
+    {
+      "skill": "eeg-stats",
+      "evidence_kind": "Cross-toolbox comparison",
+      "tested_operation": "Observed one-sample cluster t maps and sample memberships",
+      "reference": "FieldTrip statistics on identical exported participant contrasts",
+      "recorded_outcome": "Matched observed maps and cluster partitions at the reported configurations",
+      "scope": "Observed deterministic quantities. Exact Monte Carlo p-value agreement and all tests exposed by this skill are not certified",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12 , Current manuscript Results and Methods on numerical validation"
+    },
+    {
+      "skill": "eeg-spectral",
+      "evidence_kind": "Cross-implementation comparison",
+      "tested_operation": "Welch band power with explicit window and demeaning conventions",
+      "reference": "Independent NumPy Welch implementation",
+      "recorded_outcome": "Recorded band powers agree within the stated numerical criteria",
+      "scope": "Tested Welch settings and frequency bands. Other estimators require their own evidence",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-audit",
+      "evidence_kind": "Behavioural check",
+      "tested_operation": "Detection of deliberately introduced EEG-analysis defects",
+      "reference": "Seeded defects and a clean control",
+      "recorded_outcome": "Defect detection and clean-control acceptance are retained in the behavioural evaluation",
+      "scope": "The tested defects and prompts. This does not establish arbitrary scientific-review accuracy",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-methods-text",
+      "evidence_kind": "Behavioural check",
+      "tested_operation": "Methods reporting and treatment of withheld information",
+      "reference": "COBIDAS-MEEG coverage and deliberately withheld items",
+      "recorded_outcome": "Reporting coverage and non-fabrication checks are retained",
+      "scope": "The checked reporting items and evaluated outputs",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-figure",
+      "evidence_kind": "Behavioural check",
+      "tested_operation": "Plotted data, uncertainty type, units and significance masks",
+      "reference": "Saved source arrays with correct and deliberately corrupted figures",
+      "recorded_outcome": "Correct examples accepted and corresponding corrupted examples detected",
+      "scope": "The tested figure properties. General visual quality is a separate judgement",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-tfr",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Zero-mean Morlet power, ITC and baseline units",
+      "reference": "Explicit Gaussian wavelets and direct convolution",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "Specified Morlet settings and baseline definitions. Multitaper, Stockwell and arbitrary workflows are outside the check",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-connectivity",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Debiased squared wPLI in Fourier mode",
+      "reference": "Direct DFT and the debiased imaginary-cross-spectrum moment formula",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "Three edges and 8-13 Hz bins. Default multitaper, PAC and time-resolved estimators are outside the check",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-ica",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Extended Infomax recovery and specified component removal",
+      "reference": "Known rank-three sources and a known clean mixture",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "The specified synthetic mixture. ICLabel, real-artifact identification and arbitrary mixtures are not validated",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-source",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Fixed-orientation MNE and dSPM estimates",
+      "reference": "Direct regularized inverse and noise normalization",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "Shared spherical leadfield and specified inverse settings. Forward-model correctness, individual MRI and localization accuracy are not tested",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-decoding",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Sliding estimation with group-disjoint folds",
+      "reference": "Explicit fold and time loop using the same classifier",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "Dispatch, splitting and aggregation on injected-signal and paired-null fixtures. This is not independent classifier or real-data prediction validation",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-complexity",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Normalized permutation entropy",
+      "reference": "Explicit ordinal-pattern counts and Shannon entropy",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "Order 3 and delay 1 on the checked distinct-valued fixtures. Other complexity estimators are outside this check",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-microstate",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Observed state-transition probabilities",
+      "reference": "Literal adjacent-state counts",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "The supplied labels with repeats and unlabeled samples excluded. Clustering, templates and durations are not tested",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-bids",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "BrainVision BIDS round trip",
+      "reference": "Original signals, units, channel metadata, bad status and event samples",
+      "recorded_outcome": "Pass in the retained known-input record",
+      "scope": "The synthetic round trip. This is not all-format testing or full BIDS Validator conformance",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/library_numerics_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-qc",
+      "evidence_kind": "Known-input check of selected operations",
+      "tested_operation": "Constant intervals, low-amplitude warnings and rapid changes",
+      "reference": "Analytic waveforms and explicitly injected fault locations",
+      "recorded_outcome": "Original amplitude rule failed clean sinusoids. The revised helper passed 27 clean-waveform controls and the retained fault-injection checks",
+      "scope": "Amplitude diagnostics on specified controls and a short three-channel MNE sample segment. Clinical sensitivity, arbitrary artifacts, LOF and RANSAC are outside this check",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/qc_revision_2026-10-03.json , https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/546db87c2e7717ff2eeca83c6e4131294f14a97a/tools/validation/qc_sample_revision_2026-10-03.json"
+    },
+    {
+      "skill": "eeg-recipe",
+      "evidence_kind": "Interface evidence in the retained inventory",
+      "tested_operation": "Documented recipe interface",
+      "reference": "Documented automated interface checks",
+      "recorded_outcome": "Interface-tested in the archived inventory",
+      "scope": "Retained generation pilot summaries do not provide complete replayable numerical evidence",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-behavior",
+      "evidence_kind": "Interface evidence in the retained inventory",
+      "tested_operation": "Documented behaviour-analysis interface",
+      "reference": "Documented automated interface checks",
+      "recorded_outcome": "Interface-tested in the archived inventory",
+      "scope": "No independent numerical result for the full behaviour-to-EEG workflow is established by this inventory",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-group-compare",
+      "evidence_kind": "Interface evidence in the retained inventory",
+      "tested_operation": "Documented between-group interface",
+      "reference": "Documented automated interface checks",
+      "recorded_outcome": "Interface-tested in the archived inventory",
+      "scope": "Independent certification of between-group tests and F-tests is not established by these records",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-report",
+      "evidence_kind": "Interface evidence in the retained inventory",
+      "tested_operation": "Documented report interface",
+      "reference": "Documented automated interface checks",
+      "recorded_outcome": "Interface-tested in the archived inventory",
+      "scope": "Interface checks do not establish the correctness of arbitrary narrative interpretations",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    },
+    {
+      "skill": "eeg-pipeline",
+      "evidence_kind": "Interface evidence in the retained inventory",
+      "tested_operation": "Documented orchestration interface",
+      "reference": "Documented automated interface checks",
+      "recorded_outcome": "Interface-tested in the archived inventory",
+      "scope": "Numerical evidence belongs to the specific operations invoked and does not certify arbitrary generated workflows",
+      "evidence_record": "https://github.com/dengzhe-hou/Auto-EEG-Analysis/blob/539d76d1f03fd88c8afb036c76aed0c6d053c7df/paper-support/extended-records-20261109/extended-supplement.pdf#page=12"
+    }
+  ],
+  "record_basis_note": "Archived categories and known-input records are consolidated without changing their certification assignments. The manuscript separately supplies the matched MMN and five-component statistical follow-up where the rows refer to those comparisons."
+}
