@@ -1,0 +1,51 @@
+\section*{Supplementary Note 4. Evaluation protocols and uncertainty}
+\addcontentsline{toc}{section}{Supplementary Note 4. Evaluation protocols and uncertainty}
+
+\subsection*{Designs and input reuse}
+Table~\ref{tab:evaluation} separates the comparisons reported in the article. The new-data evaluation uses 11 first resting records from EEG During Mental Arithmetic Tasks (Subject19--Subject29) and nine healthy eyes-closed Mumtaz records (H S22--H S30). Each of the 20 participants contributes one record and five requests. These inputs were absent from earlier retained project runs, while their source datasets and task families had been used previously. Public plans, references, tolerances and resource files were frozen before the first assigned model session.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Distinct evaluation designs. New sessions on previously used requests are not additional independent EEG records.}
+\label{tab:evaluation}
+\begin{tabularx}{\linewidth}{@{}l X X@{}}
+\toprule
+Comparison & Assigned execution & Interpretation\\
+\midrule
+New-data Haiku & 100 requests on 20 records, three repetitions in each of two arms, giving 600 sessions. & Same model and plans, with versus without AEA. The current resource snapshot includes the sample-entropy and full-channel-label repairs.\\
+Same-input Sonnet & 300 new Sonnet sessions without AEA, matched to the saved 300 Haiku-plus-AEA deliveries from the preceding row. & Same inputs and plans, different model and thinking modes. No equivalence or noninferiority margin was prespecified. The saved comparator is reused, not rerun.\\
+Explicit ERP plans & 24 requests across P3b, N170, ERN and N400, three repetitions per arm, giving 144 sessions. & Five single-subject requests per component (sub-021--sub-025) and four group requests (sub-021--sub-040). Requests had been used during repairs.\\
+Full repair retest & 300 earlier requests on 30 records, three new repetitions per arm, giving 1800 sessions. & Tests the repaired configuration on reused inputs. Earlier outputs and scores are retained separately and are not pooled with the new-data comparison.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Haiku sessions use \texttt{claude-haiku-5-5}, disabled thinking and medium effort. Sonnet execution uses \texttt{claude-sonnet-5-5}, \texttt{between\_tools} thinking and medium effort. Native request records confirm the settings. Both arms receive the same explicit scientific plan and numerical environment. The AEA arm additionally receives selected procedures in its model input and the frozen library with executable helpers in its workspace. Procedure preloading and helper availability are part of this condition.
+
+The CodeAct execution loop allows 20 iterations, 2048 non-final response tokens, 1024 final response tokens, 8000 observation characters and three recent tool-history pairs. Each tool execution is limited to 150\,s and each session to 720\,s. The numerical image supplies Python 3.9, \mne{} 1.8.0, NumPy 1.26.4 and SciPy 1.13.1, with 1 CPU, 4\,GiB and numerical threads set to one. Assigned first deliveries include failed executions, incomplete submissions and sessions that did not use an available helper. The agent can inspect its own work before delivery, but receives no external evaluator feedback before that delivery.
+
+\subsection*{Endpoints and numerical tolerances}
+The current new-data primary endpoint checks the submitted \texttt{result.json} against independent references computed without AEA helpers. It includes numerical or categorical results and required status and path fields. Seventy requests require numerical, ranking or categorical fields, 20 require status and path fields only, and 10 require status only. Correctly reported unavailable channels or intervals can therefore pass. This endpoint is not a pure numerical-calculation accuracy measure. The complete-contract endpoint separately includes evidence arrays, required files, report consistency and required explanation or image review. Only the explanation and image checks use Sonnet, after objective checks pass.
+
+Ordinary scalar and connectivity comparisons use relative/absolute tolerances of $10^{-4}/10^{-6}$. PSD in V$^2$/Hz uses $10^{-4}/10^{-18}$ and signals in V use $10^{-5}/(2\times10^{-10})$. Time and frequency coordinates use $10^{-6}$ absolute tolerance. EDF round-trips allow two quantization steps plus $2\times10^{-10}$\,V. Status and required-path checks use their explicit contracts rather than a numerical tolerance.
+
+The ERP primary endpoint requires a single-subject amplitude within 0.1\,\uV{} of its independent reference. Group requests must match effect direction, $t$-test significance and cluster significance. Full-contract, evidence, derivative-validation and provenance passes are secondary. Plans fix events, preprocessing, ROI, time window and trial minima without ICA or trial rejection. ERP grading is deterministic and uses no model judge. Full-repair result fields and complete contracts remain separate endpoints under their frozen specifications.
+
+\subsection*{Crossed-weight intervals}
+For request $q$ and repetition $r$, let $Y_{A,qr}$ and $Y_{C,qr}$ denote the paired binary outcomes. The request difference is
+\[
+ d_q=\frac{1}{3}\sum_{r=1}^{3}(Y_{A,qr}-Y_{C,qr}),
+ \qquad \widehat\Delta=\frac{1}{Q}\sum_{q=1}^{Q}d_q.
+\]
+Each draw independently assigns unit-mean exponential weights $U_f$ to task families and $V_g$ to EEG records. With $f(q)$ and $g(q)$ denoting a request's factors, its product weight is $W_q=U_{f(q)}V_{g(q)}$, and the draw is
+\[
+ \widehat\Delta^{(b)}=\frac{\sum_q W_q^{(b)}d_q}{\sum_q W_q^{(b)}}.
+\]
+The 2.5th and 97.5th percentiles of 10,000 draws give the approximate 95\,\% interval, using seed 20261029. This construction follows crossed-factor reweighting\citep{OwenEckles2012}. The point estimate weights requests equally. Repeated sessions do not become additional EEG records, and the interval is conditional on the fixed model, plans and execution setup. Session order uses seed 20261031.
+
+For ERP, the corresponding factors are four components and six subject-factor levels, with all group requests sharing one level. An endpoint whose paired differences are all one yields a 100--100-percentage-point empirical reweighting interval. That degeneracy reflects the observed sample and reweighting scheme, not zero uncertainty about future requests. The frozen improvement rule requires a positive mean difference and positive lower endpoint.
+
+\subsection*{Resource identity and usage-based charges}
+Exact resource directories accompany the plans and results. The current new-data resource snapshot contains 288 files and includes working-tree repairs beyond its base software commit. The base commit alone does not reconstruct those resources. The ERP and full-repair evaluations retain their own tested snapshots, and the installation distribution does not substitute for them. The package's \path{VERSION_MAP.csv} supplies the detailed mapping without treating different snapshots as one run.
+
+Charges use recorded input, output and cache-token usage with retained model pricing, including failed calls. Target-analysis charges and grading charges are reported separately. The current Haiku comparison totals approximately US\$3.90 including grading, and the new Sonnet control totals US\$14.33 including grading. The figure's model-cost comparison uses target-analysis charges only. These are usage-based estimates and have not been reconciled to paid invoices. Different thinking modes and an absence of a prespecified equivalence margin limit interpretations of quality equivalence.

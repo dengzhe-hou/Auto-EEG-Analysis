@@ -1,0 +1,44 @@
+\section*{Supplementary Note 5. Reproduction and material access}
+\addcontentsline{toc}{section}{Supplementary Note 5. Reproduction and material access}
+
+\subsection*{What each entry reuses or recomputes}
+Table~\ref{tab:reproduction} distinguishes checks of retained outputs from new computation on provider EEG. None of these entries generates a new agent session. Replaying an aggregate or reading saved outputs is not equivalent to reproducing every analysis from raw data.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Inputs and scope of the retained reproduction entries. New output directories preserve earlier deliveries and check results.}
+\label{tab:reproduction}
+\begin{tabularx}{\linewidth}{@{}l X X@{}}
+\toprule
+Entry & Required input & What is checked or recomputed\\
+\midrule
+Summary replay & Saved session rows, plans and aggregation code. & Counts, request-level effects, intervals and recorded usage. No EEG preprocessing, new model calls or regrading.\\
+Delivered-output check & Original deliveries, independent references and deterministic contracts. & Saved result fields, evidence and files. It does not regenerate analyses or commission new subjective reviews.\\
+Reference recomputation & Provider EEG, explicit plans and recorded numerical environment. & Independent reference calculations in a new directory. This does not regenerate the original agent deliveries.\\
+Complete N400 raw replay & Raw inputs for 20 participants, corrected saved analysis and approved processing decisions. & A separate full raw-data execution compared all 7517 scientific fields. Reference ICA files served validation only, as described in Supplementary Note 1.\\
+Matched MMN replay & ERP CORE inputs, native toolbox code and the approved matching specification. & The 38-participant amplitude and retained-trial comparison. The group-statistic extension has a separate receipt.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{Package entry points}
+The review package supplies \path{unpack_review.py}, \path{REPRODUCTION.md}, \path{VERSION_MAP.csv} and \path{INPUT_MANIFEST.csv}. After extracting the assets into a new project directory, the documented Python entries are
+\begin{quote}\small\ttfamily
+python -B reproduction/replay\_current\_summary.py\\
+python -B reproduction/check\_retained\_fields.py\\
+python -B reproduction/check\_current\_outputs.py\\
+python -B reproduction/recompute\_current\_references.py
+\end{quote}
+Each takes \texttt{--root} and \texttt{--output} arguments. Reference recomputation additionally takes \texttt{--input-root} with provider-input aliases. The accompanying \path{REPRODUCTION.md} gives complete commands and environment instructions. Summary replay uses NumPy 1.26.4. The current reference environment is Python 3.9, \mne{} 1.8.0, NumPy 1.26.4, SciPy 1.13.1 and Pillow. Paths in the reproduction instructions are supplied by the reader and do not require the author's home directory.
+
+The current paired/model-cost material contains 900 assigned target sessions, comprising 600 Haiku sessions and 300 new Sonnet sessions. Its Haiku-plus-AEA comparator is reused for the Sonnet comparison. Exact frozen protocols and source snapshots govern the executed studies. Preparatory documents may retain an earlier pre-approval status and must not replace the final frozen protocol.
+
+\subsection*{Files accompanying the article}
+This Supplementary Information provides the necessary extended methods as one self-contained PDF. Supplementary Table S1 is a separate CSV because its complete operation-level coverage table exceeds a manuscript page. The main article retains principal methods, results and interpretation. Figure source data retain the plotted arrays and comparison receipts. Executable programs, full session tables, detailed logs and historical development records belong to the separately identified repository or review package. Historical repository PDFs remain evidence archives and are not presented as the formal Supplementary Information.
+
+Source mappings include \path{source-data/fresh-validation-20261113/} for the current same-model comparison, \path{source-data/sonnet-fresh-20261113/} for the current model-cost control, \path{source-data/mmn-fieldtrip-matched-20261111/} for matched MMN amplitudes, \path{source-data/mmn-cluster-20261112/} for its group-statistic extension, and \path{source-data/reproduction-20261113/} for the consolidated reproduction instructions. Supplementary Note 1 identifies the separate complete N400 replay receipt. These directories distinguish scientific checks from saved-summary reaggregation.
+
+\subsection*{Provider access and archive status}
+Raw EEG remains available under each original provider's terms. SEED-V signal fragments and private access links are not redistributed. Shared projections explicitly identify omitted arrays in \path{PUBLIC_EXCLUSIONS.json}, while the original deliveries remain retained by the author. Summary replay can use the non-signal aggregate records, but raw-data reproduction of restricted inputs requires the provider's authorization. Availability of an aggregate does not imply redistribution permission for the source signal.
+
+The earlier Zenodo record 24012489 preserves its DOI and public metadata with files restricted pending correction. It does not contain the complete current validation package. Updated deposition remains a separate author-controlled step. The review package and the accompanying source-data index identify available materials and access conditions without claiming that a new public archive or DOI has already been issued.

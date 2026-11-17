@@ -1,0 +1,33 @@
+\section*{Supplementary Note 3. Operation-level checks and QC revision}
+\addcontentsline{toc}{section}{Supplementary Note 3. Operation-level checks and QC revision}
+
+\subsection*{Evidence attached to an operation}
+Supplementary Table S1 lists all 22 skills, the tested operation, its reference, the retained outcome and the limits of that evidence. Four skills have cross-toolbox comparisons, one has a cross-implementation comparison, three have behavioural checks, nine have known-input checks of selected operations and five retain interface checks only. These categories describe the available evidence. A passing check of one operation does not certify every route exposed by that skill. The ERP processing-chain comparisons establish agreement of the tested final outputs, rather than separate certification of filtering, referencing, resampling and epoching.
+
+The known-input records use analytic constructions or independently expressed calculations. Shared inputs and assumptions remain explicit. In particular, the source check shares a forward model, and the decoding check shares its classifier. Table~\ref{tab:operations} summarizes what these checks can resolve. The complete settings, assertions and outcomes accompany the retained machine-readable records linked in Supplementary Table S1.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Selected known-input operations and their reference calculations. Reported numerical differences are diagnostics from the retained fixtures, not common acceptance tolerances for all skills.}
+\label{tab:operations}
+\begin{tabularx}{\linewidth}{@{}l X X@{}}
+\toprule
+Skill & Operation and reference & Retained outcome and scope\\
+\midrule
+\texttt{eeg-tfr} & Zero-mean Gaussian Morlet wavelets and direct convolution, with cycles equal to frequency/2 and fourfold decimation. & Power, ITC and baseline units passed. Maximum relative difference was approximately $2.4\times10^{-15}$. Other TFR estimators were not checked.\\
+\texttt{eeg-connectivity} & Debiased squared wPLI in Fourier mode, checked against direct DFT and imaginary-cross-spectrum moments. & Three edges over 8--13\,Hz passed, with maximum absolute difference approximately $6.9\times10^{-15}$. This is not the default multitaper or PAC route.\\
+\texttt{eeg-ica} & Extended Infomax on a known rank-three mixture in four average-referenced channels. & Minimum absolute source correlation was 0.9999047 and cleaned-mixture relative RMSE was 0.0206676. Real-artifact classification and ICLabel were not tested.\\
+\texttt{eeg-source} & Fixed-orientation MNE and dSPM compared with a direct regularized inverse and row-wise noise normalization. & Maximum relative difference was approximately $2.9\times10^{-15}$ with a shared spherical leadfield, no depth weighting and $\lambda^2=1/9$. Forward-model or anatomical accuracy was not tested.\\
+\texttt{eeg-decoding} & Sliding estimation compared with an explicit fold/time loop using the same classifier and group-disjoint folds. & Exact dispatch and aggregation agreement on injected-signal and paired-null fixtures. This is not an independent classifier implementation or a real-data accuracy estimate.\\
+\texttt{eeg-complexity} & Normalized permutation entropy from explicit ordinal-pattern counts and Shannon entropy. & Maximum absolute difference was approximately $2.2\times10^{-16}$ for order 3 and delay 1 on distinct-valued fixtures. Other complexity estimators were not checked.\\
+\texttt{eeg-microstate} & Transition probabilities from a known label sequence and explicit observed transitions. & Exact agreement for the checked sequence. Template fitting and other microstate measurements were not tested.\\
+\texttt{eeg-bids} & Synthetic BrainVision round-trip of volt-valued samples, channel metadata, bad channels and events. & Passed the $10^{-11}$\,V sample tolerance, with relative error approximately $3.7\times10^{-8}$. This is not all-format or complete BIDS conformance testing.\\
+\texttt{eeg-qc} & Clean analytic waveforms and injected constant segments, dropouts and rapid changes. & The original sinusoid failure and revised controls are distinguished below. The check covers the amplitude diagnostic.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{Revised amplitude diagnostic}
+The original adjacent-difference rule marked two of three artifact-free 10\,Hz sinusoidal channels as bad and generated 100 flat annotations. The revised helper separates exact constancy, low amplitude and rapid changes. A constant segment requires identical consecutive samples for at least 0.020\,s. Low-amplitude warnings use complete approximately 0.100\,s windows with peak-to-peak amplitude at most 0.5\,\uV. Rapid-change segments require adjacent differences of at least 150\,\uV for at least 0.005\,s. The retained configuration uses a 5\,\% affected-duration criterion for constant or rapid-change bad-channel candidates. Low amplitude alone generates a warning and never a bad-channel candidate. These diagnostic settings do not supply universal scientific exclusion thresholds.
+
+The revised analytic controls span frequencies of 1, 10 and 40\,Hz, phases of 0, 0.3 and $\pi/2$, and sampling rates of 128, 250 and 1000\,Hz, giving 27 clean waveforms. None produced a constant or rapid-change segment or a bad-channel candidate. Positive controls injected constant signals, dropouts and rapid changes. A separate retained test used the first 10\,s and first three usable EEG channels of the MNE sample dataset before and after those injections. It establishes detection of the injected changes, rather than independent clean ground truth for the original recording. The helper returns diagnostics without modifying samples, annotations or bad-channel metadata. The revised outcomes do not replace the saved original failure or upgrade the release-wide certification inventory.

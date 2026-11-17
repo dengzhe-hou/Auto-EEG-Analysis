@@ -1,0 +1,45 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext,newtxmath,microtype}
+\usepackage{amsmath,booktabs,array,tabularx,graphicx,xcolor}
+\usepackage{siunitx}
+\sisetup{detect-all}
+\usepackage[super,sort&compress]{natbib}
+\usepackage[colorlinks,linkcolor=black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage[font=small,labelfont=bf]{caption}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\renewcommand{\thepage}{S\arabic{page}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\tablename}{Supplementary Table}
+\setcounter{table}{1}
+\newcommand{\mne}{MNE-Python}
+\newcommand{\fieldtrip}{FieldTrip}
+\newcommand{\eeglab}{EEGLAB}
+\newcommand{\uV}{\si{\micro\volt}}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{https://doi.org/#1}}
+\providecommand{\eprint}[2][]{\url{https://arxiv.org/abs/#2}}
+\hypersetup{pdftitle={Supplementary Information for Reusable skills for electroencephalography analysis with large language model agents},pdfauthor={Dengzhe Hou}}
+\title{Supplementary Information\\[6pt]\large Reusable skills for electroencephalography analysis with large language model agents}
+\author{Dengzhe Hou\\\small Graduate School of Information Sciences, Tohoku University\\\small Unprecedented-scale Data Analytics Center, Tohoku University\\\small dengzhe.hou.a5@tohoku.ac.jp}
+\date{}
+\begin{document}
+\maketitle
+\noindent This document accompanies the Article and describes the tested configurations, acceptance rules and reproduction scope. It compiles retained results without additional model sessions, numerical experiments or regrading. The main article states the principal results and methods. Detailed code, full session tables and historical records remain separately identified repository materials.
+\tableofcontents
+\medskip
+\noindent Supplementary Table S1 is supplied separately as \path{Supplementary_Table_S1.csv}. It contains the complete 22-skill operation-level evidence table and its source references. Tables S2--S6 are included below.
+\input{supplementary/notes/workflows}
+\input{supplementary/notes/numerical}
+\input{supplementary/notes/operations}
+\input{supplementary/notes/evaluation}
+\input{supplementary/notes/reproduction}
+\clearpage
+\addcontentsline{toc}{section}{Supplementary references}
+\renewcommand{\refname}{Supplementary references}
+\bibliographystyle{naturemag}
+\bibliography{references}
+\end{document}

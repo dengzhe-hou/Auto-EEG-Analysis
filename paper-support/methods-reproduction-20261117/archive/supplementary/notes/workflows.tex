@@ -1,0 +1,29 @@
+\section*{Supplementary Note 1. Plans, worked configurations and replay}
+\addcontentsline{toc}{section}{Supplementary Note 1. Plans, worked configurations and replay}
+\label{si:workflows}
+
+\subsection*{From an approved plan to saved outputs}
+AEA skills supply procedural instructions, numerical conventions, executable templates and output checks. The researcher-approved plan specifies the scientific contrast, events, channels or region of interest (ROI), measurement window or frequency band, processing choices and tests. A dataset brief records the input files and event meanings. An environment record identifies the numerical packages used. Coding agents adapt and execute programs in the study workspace. A listed check establishes evidence only when its execution and result are retained.
+
+For ERP analyses, saved participant condition averages feed contrast waves and ROI measurements, which feed group statistics. The bounded ERP entry saves participant state, checks the required output contract and then creates its final submission. These operations do not choose an unapproved scientific analysis. Source scripts, plans and recorded settings are retained with the output rather than inferred from a final report.
+
+\subsection*{Recorded N400 case}
+The recorded case used the first 20 ERP CORE N400 participants \citep{Kappenman2021}. Target-word codes 211/212 defined related trials and 221/222 defined unrelated trials. The plan measured unrelated minus related at CPz/Cz/Pz over 300--500\,ms. The workflow used native 1024\,Hz sampling, average reference, ICA and local AutoReject. Its cleaning and sampling route differs from the fixed tutorial and the certification configuration.
+
+Execution used AEA commit \texttt{721a01a}, Codex CLI 0.162.1, gpt-6.1-sol at ultra effort and \mne{} 1.12.1. Earlier N400 result files and ready-made runners were removed from the agent copy. The recipe retained a published validation value, which the agent acknowledged seeing and excluded from its approved plan. The researcher approved the plan and accepted ambiguous component proposals without independently inspecting every diagnostic. Missing acquisition metadata was disclosed. These conditions describe a supervised case rather than a blinded comparison of autonomous method selection.
+
+The retained participant measurements gave a group ROI mean of \(-3.39\)\,\uV{} and a significant negative cluster. The initial replay had three out-of-tolerance fields. Technical recovery from participant-specific saved ICA checkpoints was recorded separately. A subsequent complete run of all 20 participants restarted every stage from raw EEG and passed the original 7,517 scientific-field comparisons with zero failed fields. Prior ICA outputs were not used for computation in that separate run. Reference ICA files were read only for validation. Scientific settings and comparison tolerances remained unchanged.
+
+The current receipt is \path{source-data/fig2-recorded-20261109/second-full-raw-replay-20261110/RESULTS.json}, together with its independent count check, final acceptance and field-comparison table. The earlier provenance receipt describes the checkpoint recovery before the separate complete raw replay and is retained as a historical record. This distinction prevents checkpoint recovery from being mistaken for raw-data recomputation.
+
+\subsection*{Fixed N400 tutorial}
+The separate tutorial processed the same 20 participants without ICA or amplitude-based trial rejection. It used 0.1--30\,Hz filtering, 256\,Hz resampling, average reference, epochs from \(-0.2\) to 0.8\,s and a \(-0.2\) to 0\,s baseline. CPz/Cz/Pz and 300--500\,ms defined the contrast domain. Every participant retained 60 trials per condition. The retained mean was \(-2.957\)\,\uV{} with SEM 0.466\,\uV{}. The negative-tailed cluster test used 5,000 permutations and seed 42, with the one-sided \(t_{0.95}\) forming threshold and adjacency restricted from the full montage to the three ROI channels.
+
+Replay began from saved participant averages. It reproduced the observed \(t\)-map, cluster membership, permutation null and \(p\)-values exactly. It therefore checks the saved-average statistical route, whereas the separate recorded case above has a complete raw-data replay. These are different configurations and different replay operations.
+
+\subsection*{Auditory and other adaptations}
+The auditory case used 20 participants from OpenNeuro ds006480 v1.0.1 \citep{kim2025young}. Codes 111/118 delimited active-control blocks and 113/114/115 identified standard, target and distractor events. The approved target-minus-standard ROI was Fz/Cz/Pz (E6/E65/E34), measured over 300--500\,ms. The data lacked native CPz. Processing retained 0.1--30\,Hz filtering, average reference, ICA, local AutoReject, native 1000\,Hz sampling and a \(-0.2\) to 0\,s baseline. Verified centimetre template coordinates were used despite an inconsistent sidecar unit declaration. E65 remained the acquisition reference.
+
+The fixed minima were 100 standard and 30 target trials per participant. Four participants failed these minima, leaving 16 without substitution. Saved-epoch checks recomputed measurements and group inputs. These checks do not constitute an entire auditory raw-data replay. The ROI-window mean interval and the cluster \(p\)-value concern different statistics and are reported separately in the article.
+
+The single-participant time-frequency and connectivity examples use the processing definitions in the article Methods. Their retained arrays, statistical inputs and source programs identify the plotted effects. The other raw-data pilot executions, component decisions and engineering failures remain repository records. They are not pooled with the supervised N400 case, the fixed tutorial or the formal model evaluations.

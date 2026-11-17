@@ -1,0 +1,51 @@
+\section*{Supplementary Note 2. Numerical definitions and comparison scope}
+\addcontentsline{toc}{section}{Supplementary Note 2. Numerical definitions and comparison scope}
+\label{si:numerical}
+
+\subsection*{ERP measurement definitions}
+ERP CORE provides the event meanings and recordings used for the five components \citep{Kappenman2021}. All measurements average the condition-difference wave over the approved ROI channels and inclusive time window. The reference comparisons used \mne{} 1.12.1 and MNE-BIDS-Pipeline 1.10.1 \citep{MNEBIDSPipeline}. Independently implemented toolbox arms used EEGLAB git \texttt{4207693} and FieldTrip 20170830 in GNU Octave 10.3.0. The shared EEG montage has 30 channels. No ICA or data-driven artifact repair was used in this numerical configuration. Only MMN used the specified \SI{100}{\micro\volt} peak-to-peak rejection.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{ERP configurations used for the amplitude comparisons. Window values are in milliseconds. Epoch and baseline limits are in seconds. Both measurement-window endpoints are included. MMN has 38 shared participants, P3b, N170 and N400 have 20 each, and ERN has 14, giving 112 participant--component comparisons.}
+\label{tab:si-erp-spec}
+\begin{tabularx}{\linewidth}{@{}l X r l X@{}}
+\toprule
+Component & Contrast and ROI & Window & Epoch / baseline & Minimum retained trials\\
+\midrule
+MMN & Deviant minus standard, Fz/FCz/Cz & 100--250 & \shortstack[l]{\(-0.2\) to 0.5\\\(-0.2\) to 0} & 50 deviant and 150 standard\\
+P3b & Rare minus frequent, Fz/Cz/Pz/CPz & 300--500 & \shortstack[l]{\(-0.2\) to 0.8\\\(-0.2\) to 0} & 30 rare and 100 frequent\\
+N170 & Faces minus cars, PO7/PO8/P7/P8 & 130--200 & \shortstack[l]{\(-0.2\) to 0.5\\\(-0.2\) to 0} & 30 per condition\\
+ERN & Error minus correct, FCz/Fz/Cz & 0--100 & \shortstack[l]{\(-0.4\) to 0.6\\\(-0.4\) to \(-0.2\)} & 15 per condition\\
+N400 & Unrelated minus related, CPz/Cz/Pz & 300--500 & \shortstack[l]{\(-0.2\) to 0.8\\\(-0.2\) to 0} & 30 per condition\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Band-pass limits were 0.1--30\,Hz except for N170 (0.1--40\,Hz). The reference sequence was filtering, resampling to 256\,Hz, average reference, event alignment, epoching, baseline correction, MMN rejection and condition averaging. The article Methods specify the native toolbox implementations and filter conventions. This shared specification does not imply that every intermediate step has separate numerical certification.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Different numerical comparisons and what their acceptance rules establish. Results are compiled from retained records without recomputation.}
+\label{tab:si-comparisons}
+\begin{tabularx}{\linewidth}{@{}p{0.22\linewidth} X X@{}}
+\toprule
+Comparison & Criterion and retained result & Interpretation\\
+\midrule
+MNE-BIDS-Pipeline amplitudes & 112 shared values within \SI{0.1}{\micro\volt}, maximum stored difference \SI{0.090}{\micro\volt} & The implementations share MNE kernels. This checks composition through the tested amplitude rather than independent numerical engines.\\
+Matched FieldTrip amplitudes & 74 comparisons without rejection within \SI{0.1}{\micro\volt}, plus a separate matched MMN comparison in all 38 shared participants & The original toolbox defaults and the approved matched configurations are different records.\\
+Observed group statistics & 5,610 values across five components, maximum absolute difference \(3.55\times10^{-15}\), identical partitions & Deterministic maps and sample memberships, not exact Monte Carlo \(p\)-values.\\
+Welch band power & Independent NumPy computation under matched window and demeaning conventions & Tested Welch settings and band definitions, not agreement between all spectral estimators.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{Events, rejection and the separate MMN match}
+Event codes were decoded from each input's native representation and checked against the ERP CORE labels. The original comparisons recorded trial counts. A later retained-identity check between AEA and MNE-BIDS-Pipeline matched 111 of 112 participant--component records. One MMN participant differed by one retained deviant trial. This is separate from the fully matched FieldTrip MMN comparison, where counts and complete identities matched for every one of the 38 participants.
+
+The matched MMN configuration retained the reference recordings, participants, ROI, window and rejection threshold. Independent Hamming FIR primitives matched the 0.1\,Hz lower and 7.5\,Hz upper transitions, event onsets used nearest-even rounding to the 256\,Hz grid, and odd-reflection boundaries matched the reference padding rule. Reference amplitudes and rejection masks were not supplied to the producer. The maximum amplitude difference decreased from \SI{0.1838}{\micro\volt} to \SI{0.000495}{\micro\volt}, with all 38 within the unchanged \SI{0.1}{\micro\volt} criterion. The reference amplitudes were stored to \SI{0.001}{\micro\volt}, so the residual includes storage rounding. Original configurations were retained, and EEGLAB was not further matched.
+
+\subsection*{Observed maps, clusters and permutation estimates}
+Both implementations received identical participant contrast arrays and the same channel-adjacency graph for the observed-statistic comparison. The matched configuration used the component window and the one-sided \(t_{0.95}\) cluster-forming threshold. Arrays and cluster partitions were compared directly. The MMN extension used 38 contrasts, 30 channels and 39 time samples, adding 1,170 values to the original four-component comparison.
+
+Cluster permutation \(p\)-values are Monte Carlo estimates \citep{MarisOostenveld2007}. Independent implementations can draw different permutations despite using the same nominal seed. The comparison therefore certifies deterministic maps and partitions within its recorded tolerance rather than exact \(p\)-value equality. In the separate threshold-sensitivity record, using \(t_{0.975}\) instead of the specified one-sided \(t_{0.95}\) changed cluster counts and extents while the leading cluster remained significant. Matching that erroneous threshold between tools establishes agreement under that configuration, not correctness of the erroneous choice.
