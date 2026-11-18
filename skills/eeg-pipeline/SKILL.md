@@ -47,6 +47,12 @@ the pipeline complete. Existing approved ICA decisions apply to their saved
 decomposition, not to matching component numbers in a new fit.
 
 
+For an explicit saved stage graph, reuse stages with accepted outputs and
+run a pending stage only after all of its direct prerequisites have passed.
+A stage waiting for a pending prerequisite is still ineligible for the current
+handoff. Keep that distinction when reporting readiness, together with any
+separate failures that require review. Independent ready stages can proceed.
+
 ## Procedure reference
 
 Choose the section that matches the current operation. Detailed code examples

@@ -58,6 +58,13 @@ python tools/load_skill.py eeg-decoding --section "Phase A — Setup"
 - **Never** report only accuracy for a clinical/state classifier — emit **sensitivity and specificity** (+ the confusion matrix), plus balanced accuracy and ROC-AUC, computed per fold and averaged. Accuracy hides which class is being missed (e.g. high accuracy on a control-heavy sample while patient sensitivity is near chance).
 
 
+For time-resolved decoding of supplied MNE epoch arrays, verify the declared
+axis order against channel and time metadata. The MNE layout is
+`(n_trials, n_channels, n_times)`. To fit at one time point, use
+`X[:, :, time_index]`. Held-out predictions go back to their original trial
+rows in a `(n_trials, n_times)` array. Verify its shape and that every row
+receives one held-out prediction at each time.
+
 ## Procedure reference
 
 Choose the section that matches the current operation. Detailed code examples

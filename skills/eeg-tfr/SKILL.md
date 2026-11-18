@@ -62,6 +62,13 @@ Before running, these must exist:
 - **Never** treat dB/logratio baseline as assumption-free: it assumes a multiplicative oscillation/aperiodic relationship, so a baseline or condition difference in 1/f can produce a spurious narrowband effect — remove/parameterize the aperiodic component or use additive baseline with 1/f as a covariate (Gyurkovics et al. 2021).
 
 
+When the approved plan specifies MNE Morlet for supplied arrays, use
+`mne.time_frequency.tfr_array_morlet` with explicitly resolved frequencies,
+cycles, decimation and zero-mean settings. Use the same implementation for
+power and complex coefficients so the wavelet normalization and sample support
+agree. The complex result axes are trial, channel, frequency and time. Reduce
+over trials first and preserve channel and time order when selecting outputs.
+
 ## Procedure reference
 
 When comparing total, ERP-subtracted and evoked power, retain the original

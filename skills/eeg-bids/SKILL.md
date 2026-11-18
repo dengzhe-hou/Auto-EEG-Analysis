@@ -47,6 +47,14 @@ Keep codes and descriptions together, and read back the exported table to check
 each event's identity, onset, duration and count. See Phase B of the procedure.
 
 
+For a bounded BrainVision export, verify that the Python process which runs the
+saved script can import MNE-BIDS and PyBV. A notebook's import path alone does
+not configure a separate Python process. Run the export and read it back before
+reporting completion. For supplied external events, use the event export helper
+to preserve source-sample identities and convert to exported relative samples.
+Retain the supplied reference and line-frequency metadata in the EEG sidecar
+and confirm the actual values by reading the sidecar back.
+
 ## Procedure reference
 
 Choose the section that matches the current operation. Detailed code examples

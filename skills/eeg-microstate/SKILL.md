@@ -57,6 +57,12 @@ Before running, these must exist:
 - **Never** report transition probabilities as a standalone longitudinal biomarker — they are the least reliable parameter (ICC often < 0.50); base biomarker claims on duration / occurrence / coverage (Kleinert et al. 2023).
 
 
+For summaries of supplied fitted labels, keep sample order and the approved
+treatment of unlabeled samples. If the plan defines GEV against all input GFP
+power, the denominator is the sum of squared GFP over those samples. Only the
+numerator is weighted by squared spatial correlation to the assigned map.
+Retain class order and full precision in machine-readable summaries.
+
 ## Procedure reference
 
 Choose the section that matches the current operation. Detailed code examples

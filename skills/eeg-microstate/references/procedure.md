@@ -245,6 +245,13 @@ Report **both** the observed matrix and the base-rate-corrected `T_obs − T_exp
 - **Coverage**: Percentage of total recording time assigned to each class. Should sum to ~100%.
 - **Transition probabilities**: Markov-like matrix. Non-random transitions suggest structured temporal dynamics.
 
+For a bounded summary of supplied labels, GFP and assigned-map correlations,
+use the denominator declared in the plan. With all input samples as the
+denominator, the GEV for class k is the sum of `GFP**2 * corr**2` at samples
+assigned to k, divided by the sum of `GFP**2` over the entire input. The total
+is the sum across assigned classes. Keep any unlabeled samples in the
+denominator under this convention and exclude them from all class numerators.
+
 ## Phase G — Write outputs
 
 Retain per-participant preparation records and the group pooling record: input
