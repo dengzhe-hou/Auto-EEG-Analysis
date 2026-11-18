@@ -1,5 +1,12 @@
 # Versions and changes
 
+## Python package 0.3.4
+
+- Verify source event samples and read back exported EEG metadata in BIDS workflows.
+- Document the trial, channel and time axes for time-resolved decoding and Morlet transforms.
+- Clarify the declared GEV denominator and the handling of unlabeled microstate samples.
+- Resume eligible pipeline stages using their direct prerequisite states.
+
 ## Choose a version
 
 The website and setup commands describe **`main`**, which includes fixes and examples

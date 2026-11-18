@@ -18,6 +18,7 @@ docs/PLATFORM_SUPPORT.md
 docs/PRELOADED_SKILLS.md
 docs/REPLAY.md
 docs/RUN_SETTINGS.md
+docs/SKILL_EVIDENCE.md
 docs/WINDOWS_FIRST_RUN.md
 docs/assets/eeglab/01-eeglab-aea-menu.jpg
 docs/assets/eeglab/02-settings-claude.jpg

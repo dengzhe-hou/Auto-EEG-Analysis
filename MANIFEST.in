@@ -21,6 +21,7 @@ include docs/PLATFORM_SUPPORT.md
 include docs/PRELOADED_SKILLS.md
 include docs/REPLAY.md
 include docs/RUN_SETTINGS.md
+include docs/SKILL_EVIDENCE.md
 include docs/WINDOWS_FIRST_RUN.md
 include docs/assets/eeglab/01-eeglab-aea-menu.jpg
 include docs/assets/eeglab/02-settings-claude.jpg

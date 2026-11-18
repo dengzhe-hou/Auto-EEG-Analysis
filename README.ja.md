@@ -6,7 +6,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · **日本語**
 
-[Website](https://dengzhe-hou.github.io/Auto-EEG-Analysis/index.ja.html) · [ドキュメント](docs/GETTING_STARTED.md) · [PyPI package](https://pypi.org/project/auto-eeg-analysis/0.3.3/) · [EEGLAB 0.1.3](docs/EEGLAB.md) · [Zenodo](https://doi.org/10.5281/zenodo.24012489)
+[Website](https://dengzhe-hou.github.io/Auto-EEG-Analysis/index.ja.html) · [ドキュメント](docs/GETTING_STARTED.md) · [PyPI package](https://pypi.org/project/auto-eeg-analysis/0.3.4/) · [EEGLAB 0.1.3](docs/EEGLAB.md) · [Zenodo](https://doi.org/10.5281/zenodo.24012489)
 
 </div>
 
@@ -26,7 +26,7 @@ ERP COREの20名分を使う固定チュートリアルです。CPz/Cz/Pz ERPの
 PyPIパッケージから、AEAリソースを含む新しいプロジェクトを作成します。Python 3.10以降と既存のMNE環境が必要です。標準パッケージは解析用の依存関係をインストールしません。
 
 ```sh
-python -m pip install auto-eeg-analysis==0.3.3
+python -m pip install auto-eeg-analysis==0.3.4
 aea-eeg init ./my-eeg-study --agent codex
 cd my-eeg-study
 codex

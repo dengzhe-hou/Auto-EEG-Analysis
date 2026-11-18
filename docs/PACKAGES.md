@@ -5,7 +5,7 @@
 Use Python 3.10 or newer in your existing analysis environment.
 
 ```sh
-python -m pip install auto-eeg-analysis==0.3.3
+python -m pip install auto-eeg-analysis==0.3.4
 aea-eeg init ./my-eeg-study --agent codex
 cd my-eeg-study
 ```
@@ -19,15 +19,15 @@ The default package has no scientific runtime dependencies. Reuse an existing
 MNE environment. To create a new Conda environment from the copied specification,
 run `conda env create -f environment.yml` and `conda activate aeais` in the project.
 Alternatively install the existing analysis dependency set with
-`python -m pip install 'auto-eeg-analysis[analysis]==0.3.3'`.
+`python -m pip install 'auto-eeg-analysis[analysis]==0.3.4'`.
 
 Read `AGENT_GUIDE.md` and approve a study-specific plan before computation.
 The package version is separate from retained validation and plugin versions.
 `aea-eeg --version` reports the resource source commit.
 
-The [PyPI page](https://pypi.org/project/auto-eeg-analysis/0.3.3/) contains release files. Version 0.3.3 preserves the
-archive source-version record. The first rc1 remains available. Initial package
-checks and fixes are distribution checks and add no scientific validation.
+The [PyPI page](https://pypi.org/project/auto-eeg-analysis/0.3.4/) contains release files. Version 0.3.4 updates the BIDS export, decoding,
+microstate, workflow resumption and time-frequency procedures. Earlier versions
+remain available from the PyPI release history.
 
 ## MATLAB toolbox preview
 
@@ -55,7 +55,7 @@ Use the linked GitHub release for the tested `.mltbx` installer.
 | --- | --- | --- |
 | [GitHub](https://github.com/dengzhe-hou/Auto-EEG-Analysis) | `main`, changing with commits | Current source and documentation. Record the commit used. |
 | [GitHub stable release](https://github.com/dengzhe-hou/Auto-EEG-Analysis/releases/tag/v0.3.2) | `v0.3.2`, 3 October 2026 | Earlier fixed release. Later package and adapter changes have separate versions. |
-| [PyPI](https://pypi.org/project/auto-eeg-analysis/0.3.3/) | `0.3.3` | Resource installer and project initialization. Bundled resources come from `62944027e4484b051614dc2f1bd397db97f5823c`. |
+| [PyPI](https://pypi.org/project/auto-eeg-analysis/0.3.4/) | `0.3.4` | Resource installer and project initialization. Bundled resources come from `3a6c66285b32447790602c123279ea9c0b2517b6`. |
 | [EEGLAB catalogue](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php) | Adapter `0.1.3` | EEGLAB menu extension. Connect it to a matching AEA resource checkout and coding client. |
 | [FieldTrip directory](https://www.fieldtriptoolbox.org/extensions/) | External extension listing, merged 7 November 2026 | AEA entry linking to its independently maintained source and support. |
 | [MATLAB toolbox](https://github.com/dengzhe-hou/Auto-EEG-Analysis/releases/tag/eeglab-v0.1.3-preview) | `0.1.3 preview` | `.mltbx` containing the adapter and resource library, with installation helpers. |
