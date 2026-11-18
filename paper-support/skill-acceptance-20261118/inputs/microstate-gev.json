@@ -1,0 +1,44 @@
+{
+  "task": {
+    "id": "microstate-gev",
+    "skill": "eeg-microstate",
+    "operation": "gev",
+    "request": "Calculate the per-state GEV and total GEV from the supplied spatial correlation to each sample assigned state and GFP, using GFP-squared weighting. Denominator includes all sample powers, with no numerator contribution from unlabeled samples. Return gev_by_state in order 0,1,2 and gev_total as fractions.",
+    "fields": [
+      "gev_by_state",
+      "gev_total"
+    ]
+  },
+  "input": {
+    "label": [
+      0,
+      0,
+      1,
+      1,
+      -1,
+      2,
+      2,
+      2
+    ],
+    "gfp": [
+      9.0,
+      3.0,
+      4.0,
+      1.0,
+      2.0,
+      3.0,
+      7.0,
+      4.0
+    ],
+    "corr": [
+      0.9,
+      0.8,
+      0.6,
+      0.7,
+      0.23,
+      0.4,
+      0.8,
+      0.52
+    ]
+  }
+}

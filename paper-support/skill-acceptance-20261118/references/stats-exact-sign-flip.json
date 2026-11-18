@@ -1,0 +1,9 @@
+{
+  "expected": {
+    "observed_abs_mean": 2.2,
+    "n_patterns": 32,
+    "p_exact": 0.1875
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

@@ -1,0 +1,32 @@
+{
+  "task": {
+    "id": "connectivity-plv",
+    "skill": "eeg-connectivity",
+    "operation": "plv",
+    "request": "Calculate temporal PLV of two channels from the provided narrowband phase arrays in radians. Return plv and n_samples. The phase extraction has already been performed.",
+    "fields": [
+      "plv",
+      "n_samples"
+    ]
+  },
+  "input": {
+    "phase_a": [
+      0.1,
+      0.9,
+      1.8,
+      1.4,
+      2.0,
+      2.4,
+      1.1
+    ],
+    "phase_b": [
+      0.2,
+      0.0,
+      2.1,
+      1.4,
+      1.3,
+      3.0,
+      2.0
+    ]
+  }
+}

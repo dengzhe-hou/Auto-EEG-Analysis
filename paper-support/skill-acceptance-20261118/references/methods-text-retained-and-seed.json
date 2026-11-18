@@ -1,0 +1,15 @@
+{
+  "expected": {
+    "sampling_hz": 250,
+    "reference": "not recorded",
+    "retained_trials": 15,
+    "seed": 75,
+    "epoch_start_s": -0.14,
+    "epoch_end_s": 0.68
+  },
+  "atol": 1e-07,
+  "artifact": {
+    "kind": "methods",
+    "path": "methods.md"
+  }
+}

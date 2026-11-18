@@ -1,0 +1,35 @@
+{
+  "task": {
+    "id": "methods-text-acquisition",
+    "skill": "eeg-methods-text",
+    "operation": "acquisition",
+    "request": "Draft a concise, truthful Methods paragraph from the acquisition and executed-stage records. Save methods.md with the paragraph plus one machine-readable line of the form field = value for each requested result field. Use 'not recorded' for absent reference. Report actual retained trial count, executed seed, and epoch times in s. Save the same field values as result.json.",
+    "fields": [
+      "sampling_hz",
+      "reference",
+      "retained_trials",
+      "seed",
+      "epoch_start_s",
+      "epoch_end_s"
+    ],
+    "artifact": "methods.md"
+  },
+  "input": {
+    "acquisition": {
+      "sampling_hz": 250,
+      "reference": "FCz"
+    },
+    "execution": {
+      "n_trials": 20,
+      "n_excluded": 3,
+      "executed_seed": 73,
+      "planned_seed": 14,
+      "epoch_start_sample": -25,
+      "epoch_end_sample": 150,
+      "band_hz": [
+        0.2,
+        35
+      ]
+    }
+  }
+}

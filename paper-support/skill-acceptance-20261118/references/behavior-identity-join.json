@@ -1,0 +1,17 @@
+{
+  "expected": {
+    "trial_ids": [
+      11,
+      13,
+      16,
+      15
+    ],
+    "missing_on_eeg": [
+      12,
+      14
+    ],
+    "slope_ms_per_uV": 40.0
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

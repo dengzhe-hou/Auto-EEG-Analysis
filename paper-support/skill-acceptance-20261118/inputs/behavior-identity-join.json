@@ -1,0 +1,43 @@
+{
+  "task": {
+    "id": "behavior-identity-join",
+    "skill": "eeg-behavior",
+    "operation": "identity-join",
+    "request": "Join EEG and behavior strictly on the trial ID, retaining EEG row order and reporting unmatched behavior IDs. On the matched trials from one subject fit OLS RT in ms against EEG in uV with an intercept. Return trial_ids, missing_on_eeg, and slope_ms_per_uV.",
+    "fields": [
+      "trial_ids",
+      "missing_on_eeg",
+      "slope_ms_per_uV"
+    ]
+  },
+  "input": {
+    "eeg_trial_ids": [
+      11,
+      13,
+      16,
+      15
+    ],
+    "eeg_uV": [
+      1,
+      4,
+      3,
+      2
+    ],
+    "behavior_trial_ids": [
+      16,
+      15,
+      14,
+      13,
+      12,
+      11
+    ],
+    "rt_ms": [
+      360,
+      320,
+      509,
+      400,
+      700,
+      280
+    ]
+  }
+}

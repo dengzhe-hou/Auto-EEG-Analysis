@@ -1,0 +1,8 @@
+{
+  "expected": {
+    "plv": 0.8274789078532228,
+    "n_samples": 7
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

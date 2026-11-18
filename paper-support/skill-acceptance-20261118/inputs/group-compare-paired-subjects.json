@@ -1,0 +1,31 @@
+{
+  "task": {
+    "id": "group-compare-paired-subjects",
+    "skill": "eeg-group-compare",
+    "operation": "paired-subjects",
+    "request": "Test independent participant-level summaries using two-sided paired t test on A minus B. Return statistic, p_value and n_per_group in input order. Each element is one participant value. Check the specified test path and unit of analysis; no cluster inference is assigned.",
+    "fields": [
+      "statistic",
+      "p_value",
+      "n_per_group"
+    ]
+  },
+  "input": {
+    "A": [
+      2.0,
+      1.0,
+      3.0,
+      4.0,
+      2.0,
+      5.0
+    ],
+    "B": [
+      1.2,
+      0.8,
+      3.5,
+      2.6,
+      1.0,
+      3.8
+    ]
+  }
+}

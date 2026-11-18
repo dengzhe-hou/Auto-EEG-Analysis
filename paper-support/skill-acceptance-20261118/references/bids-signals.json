@@ -1,0 +1,16 @@
+{
+  "expected": {
+    "relative_event_samples": [
+      113,
+      256,
+      381
+    ],
+    "bad_channels": [],
+    "sfreq": 128
+  },
+  "atol": 1e-07,
+  "artifact": {
+    "kind": "bids",
+    "path": "bids/sub-01/eeg/sub-01_task-check_eeg.vhdr"
+  }
+}

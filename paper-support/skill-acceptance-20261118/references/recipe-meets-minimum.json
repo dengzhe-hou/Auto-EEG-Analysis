@@ -1,0 +1,10 @@
+{
+  "expected": {
+    "eligible": true,
+    "missing_markers": [],
+    "insufficient_present_markers": [],
+    "recipe_version": "v0.1.0"
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

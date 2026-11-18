@@ -1,0 +1,24 @@
+--- original/run_suite.py
++++ retest/run_suite.py
+@@ -28,3 +28,3 @@
+ api_client.LEDGER = ROOT/'api_usage.jsonl'
+-api_client.CAP = 5.0
++api_client.CAP = 2.0
+ UTC = lambda: datetime.now(timezone.utc).isoformat()
+@@ -59,3 +59,5 @@
+             output = self.execute(
+-                'import sys; sys.path.insert(0, "/input/bids-deps"); import mne_bids, pybv; print("BIDS_DEPS_READY")',
++                'import os, sys; deps="/input/bids-deps"; sys.path.insert(0, deps); '
++                'os.environ["PYTHONPATH"]=os.pathsep.join(filter(None, (deps, os.environ.get("PYTHONPATH")))); '
++                'import mne_bids, pybv; print("BIDS_DEPS_READY")',
+                 timeout_sec=30)
+@@ -116,3 +118,3 @@
+ {task['request']}
+-The required fields are {', '.join(task['fields'])}. Save /workspace/result.json.
++Use full numeric precision in result.json. The required fields are {', '.join(task['fields'])}. Save /workspace/result.json.
+ Save the actual reusable program as /workspace/analysis.py and execute that saved
+@@ -194,3 +196,3 @@
+               'incomplete':sum(r['passed'] is None for r in results),'budget':budget,
+-              'complete':checked==198 and budget['committed_usd']<=5}
++              'complete':checked==198 and budget['committed_usd']<=api_client.CAP}
+     put(ROOT/'PROGRESS.json',progress)

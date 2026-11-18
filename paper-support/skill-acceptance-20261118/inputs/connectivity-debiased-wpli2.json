@@ -1,0 +1,22 @@
+{
+  "task": {
+    "id": "connectivity-debiased-wpli2",
+    "skill": "eeg-connectivity",
+    "operation": "debiased-wpli2",
+    "request": "Use trial-level imaginary cross-spectrum samples at one frequency and one edge. Return ordinary wpli and debiased squared wpli2. Use the debiased moment formula with self-products removed in both numerator and denominator.",
+    "fields": [
+      "wpli",
+      "wpli2"
+    ]
+  },
+  "input": {
+    "imaginary_cross_spectrum": [
+      1.3,
+      0.7,
+      -0.5,
+      2.2,
+      -0.1,
+      0.9
+    ]
+  }
+}

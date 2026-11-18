@@ -1,0 +1,42 @@
+{
+  "task": {
+    "id": "audit-window",
+    "skill": "eeg-audit",
+    "operation": "window",
+    "request": "Act as the assigned independent reviewer of this supplied analysis record. Check the six frozen plan fields against the execution receipt. In result.json return verdict (\"pass\" or \"fail\") and issues (sorted list of mismatched field names). This is a bounded audit of agreement on these fields.",
+    "fields": [
+      "verdict",
+      "issues"
+    ]
+  },
+  "input": {
+    "analysis_plan": {
+      "roi": [
+        "Cz",
+        "Pz"
+      ],
+      "window_ms": [
+        200,
+        300
+      ],
+      "contrast": "target-standard",
+      "observation_unit": "subject",
+      "unit": "uV",
+      "correction": "holm"
+    },
+    "execution_receipt": {
+      "roi": [
+        "Cz",
+        "Pz"
+      ],
+      "window_ms": [
+        220,
+        300
+      ],
+      "contrast": "target-standard",
+      "observation_unit": "subject",
+      "unit": "uV",
+      "correction": "holm"
+    }
+  }
+}

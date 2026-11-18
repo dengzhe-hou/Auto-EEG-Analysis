@@ -1,0 +1,23 @@
+{
+  "task": {
+    "id": "recipe-insufficient-trials",
+    "skill": "eeg-recipe",
+    "operation": "insufficient-trials",
+    "request": "Check applicability of the AEA n400-semantic recipe from its frozen RECIPE.md header. Verify the supplied post-rejection counts, required markers, sampling rate, and channel count. Return eligible, missing_markers (sorted), insufficient_present_markers (sorted), and recipe_version. This is the recipe preflight operation.",
+    "fields": [
+      "eligible",
+      "missing_markers",
+      "insufficient_present_markers",
+      "recipe_version"
+    ]
+  },
+  "input": {
+    "recipe": "n400-semantic",
+    "channel_count": 32,
+    "sfreq": 256,
+    "marker_counts": {
+      "stimulus/related": 44,
+      "stimulus/unrelated": 17
+    }
+  }
+}

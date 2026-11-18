@@ -1,0 +1,11 @@
+{
+  "expected": {
+    "verdict": "fail",
+    "issues": [
+      "observation_unit",
+      "unit"
+    ]
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

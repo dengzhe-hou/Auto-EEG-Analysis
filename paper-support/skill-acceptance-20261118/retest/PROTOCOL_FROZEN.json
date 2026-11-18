@@ -1,0 +1,34 @@
+{
+  "candidate_commit": "ac4aa825e454ab8ce3745d428ce5398f00fecfef",
+  "original_score": [
+    168,
+    198
+  ],
+  "original_base_commit": "06c6c44d6fcc11f0a4727b292588525b7ca83f1e",
+  "frozen_utc": "2026-11-18T05:59:46.126622+00:00",
+  "first_target_sessions_at_freeze": 0,
+  "authorization": {
+    "skills": 22,
+    "tasks": 66,
+    "reps": 3,
+    "sessions": 198,
+    "cap_usd": 2.0,
+    "model": "claude-haiku-5-5",
+    "thinking": "disabled",
+    "effort": "medium",
+    "allowed_workers": 1,
+    "paid_evaluator": false
+  },
+  "offline_job": "51189",
+  "same_inputs_references_and_verifier": true,
+  "changes": [
+    "Python subprocess dependency propagation for BIDS",
+    "clarified applicable procedure routes and 16 task contracts",
+    "full JSON numeric precision in the common instructions"
+  ],
+  "cpu_per_worker": 1,
+  "memory_gib": 4,
+  "max_workers": 1,
+  "time_limit_minutes_per_batch": 20,
+  "analysis": "Report the two engineering deliveries separately. The retest includes changes to both execution and instruction wording."
+}

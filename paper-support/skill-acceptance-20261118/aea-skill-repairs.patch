@@ -1,0 +1,107 @@
+diff --git a/skills/eeg-bids/SKILL.md b/skills/eeg-bids/SKILL.md
+index fef0e6f..a9d6229 100644
+--- a/skills/eeg-bids/SKILL.md
++++ b/skills/eeg-bids/SKILL.md
+@@ -47,6 +47,14 @@ Keep codes and descriptions together, and read back the exported table to check
+ each event's identity, onset, duration and count. See Phase B of the procedure.
+ 
+ 
++For a bounded BrainVision export, verify that the Python process which runs the
++saved script can import MNE-BIDS and PyBV. A notebook's import path alone does
++not configure a separate Python process. Run the export and read it back before
++reporting completion. For supplied external events, use the event export helper
++to preserve source-sample identities and convert to exported relative samples.
++Retain the supplied reference and line-frequency metadata in the EEG sidecar
++and confirm the actual values by reading the sidecar back.
++
+ ## Procedure reference
+ 
+ Choose the section that matches the current operation. Detailed code examples
+diff --git a/skills/eeg-decoding/SKILL.md b/skills/eeg-decoding/SKILL.md
+index adb2aef..3dd19a2 100644
+--- a/skills/eeg-decoding/SKILL.md
++++ b/skills/eeg-decoding/SKILL.md
+@@ -58,6 +58,13 @@ python tools/load_skill.py eeg-decoding --section "Phase A — Setup"
+ - **Never** report only accuracy for a clinical/state classifier — emit **sensitivity and specificity** (+ the confusion matrix), plus balanced accuracy and ROC-AUC, computed per fold and averaged. Accuracy hides which class is being missed (e.g. high accuracy on a control-heavy sample while patient sensitivity is near chance).
+ 
+ 
++For time-resolved decoding of supplied MNE epoch arrays, verify the declared
++axis order against channel and time metadata. The MNE layout is
++`(n_trials, n_channels, n_times)`. To fit at one time point, use
++`X[:, :, time_index]`. Held-out predictions go back to their original trial
++rows in a `(n_trials, n_times)` array. Verify its shape and that every row
++receives one held-out prediction at each time.
++
+ ## Procedure reference
+ 
+ Choose the section that matches the current operation. Detailed code examples
+diff --git a/skills/eeg-microstate/SKILL.md b/skills/eeg-microstate/SKILL.md
+index 1061905..c073794 100644
+--- a/skills/eeg-microstate/SKILL.md
++++ b/skills/eeg-microstate/SKILL.md
+@@ -57,6 +57,12 @@ Before running, these must exist:
+ - **Never** report transition probabilities as a standalone longitudinal biomarker — they are the least reliable parameter (ICC often < 0.50); base biomarker claims on duration / occurrence / coverage (Kleinert et al. 2023).
+ 
+ 
++For summaries of supplied fitted labels, keep sample order and the approved
++treatment of unlabeled samples. If the plan defines GEV against all input GFP
++power, the denominator is the sum of squared GFP over those samples. Only the
++numerator is weighted by squared spatial correlation to the assigned map.
++Retain class order and full precision in machine-readable summaries.
++
+ ## Procedure reference
+ 
+ Choose the section that matches the current operation. Detailed code examples
+diff --git a/skills/eeg-microstate/references/procedure.md b/skills/eeg-microstate/references/procedure.md
+index f899659..0668c84 100644
+--- a/skills/eeg-microstate/references/procedure.md
++++ b/skills/eeg-microstate/references/procedure.md
+@@ -245,6 +245,13 @@ Report **both** the observed matrix and the base-rate-corrected `T_obs − T_exp
+ - **Coverage**: Percentage of total recording time assigned to each class. Should sum to ~100%.
+ - **Transition probabilities**: Markov-like matrix. Non-random transitions suggest structured temporal dynamics.
+ 
++For a bounded summary of supplied labels, GFP and assigned-map correlations,
++use the denominator declared in the plan. With all input samples as the
++denominator, the GEV for class k is the sum of `GFP**2 * corr**2` at samples
++assigned to k, divided by the sum of `GFP**2` over the entire input. The total
++is the sum across assigned classes. Keep any unlabeled samples in the
++denominator under this convention and exclude them from all class numerators.
++
+ ## Phase G — Write outputs
+ 
+ Retain per-participant preparation records and the group pooling record: input
+diff --git a/skills/eeg-pipeline/SKILL.md b/skills/eeg-pipeline/SKILL.md
+index 2622819..0b5c68b 100644
+--- a/skills/eeg-pipeline/SKILL.md
++++ b/skills/eeg-pipeline/SKILL.md
+@@ -47,6 +47,12 @@ the pipeline complete. Existing approved ICA decisions apply to their saved
+ decomposition, not to matching component numbers in a new fit.
+ 
+ 
++For an explicit saved stage graph, reuse stages with accepted outputs and
++run a pending stage only after all of its direct prerequisites have passed.
++A stage waiting for a pending prerequisite is still ineligible for the current
++handoff. Keep that distinction when reporting readiness, together with any
++separate failures that require review. Independent ready stages can proceed.
++
+ ## Procedure reference
+ 
+ Choose the section that matches the current operation. Detailed code examples
+diff --git a/skills/eeg-tfr/SKILL.md b/skills/eeg-tfr/SKILL.md
+index 5ad2e1f..e04ac23 100644
+--- a/skills/eeg-tfr/SKILL.md
++++ b/skills/eeg-tfr/SKILL.md
+@@ -62,6 +62,13 @@ Before running, these must exist:
+ - **Never** treat dB/logratio baseline as assumption-free: it assumes a multiplicative oscillation/aperiodic relationship, so a baseline or condition difference in 1/f can produce a spurious narrowband effect — remove/parameterize the aperiodic component or use additive baseline with 1/f as a covariate (Gyurkovics et al. 2021).
+ 
+ 
++When the approved plan specifies MNE Morlet for supplied arrays, use
++`mne.time_frequency.tfr_array_morlet` with explicitly resolved frequencies,
++cycles, decimation and zero-mean settings. Use the same implementation for
++power and complex coefficients so the wavelet normalization and sample support
++agree. The complex result axes are trial, channel, frequency and time. Reduce
++over trials first and preserve channel and time order when selecting outputs.
++
+ ## Procedure reference
+ 
+ When comparing total, ERP-subtracted and evoked power, retain the original

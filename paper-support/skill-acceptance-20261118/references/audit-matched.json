@@ -1,0 +1,8 @@
+{
+  "expected": {
+    "verdict": "pass",
+    "issues": []
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

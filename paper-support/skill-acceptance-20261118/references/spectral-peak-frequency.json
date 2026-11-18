@@ -1,0 +1,8 @@
+{
+  "expected": {
+    "alpha_peak_hz": 11,
+    "psd_uV2_per_hz": 0.8533333333333335
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

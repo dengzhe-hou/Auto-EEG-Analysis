@@ -1,0 +1,32 @@
+{
+  "task": {
+    "id": "figure-erp-wave",
+    "skill": "eeg-figure",
+    "operation": "erp-wave",
+    "request": "Render the supplied data as a line in Matplotlib, using figsize=(4,3), fig.add_axes([.2,.2,.6,.6]), xlim=(-1,5), ylim=(-3,3), and the supplied axis labels. Set line gid=\"aea-data\". Save fig.svg without tight crop, so the actual SVG data path can be read back. Return n_points and x_label and y_label.",
+    "fields": [
+      "n_points",
+      "x_label",
+      "y_label"
+    ],
+    "artifact": "fig.svg"
+  },
+  "input": {
+    "x": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "y": [
+      0.2,
+      0.6,
+      1.1,
+      0.9,
+      0.3
+    ],
+    "x_label": "Time (s)",
+    "y_label": "Amplitude (uV)"
+  }
+}

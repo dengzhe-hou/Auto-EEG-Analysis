@@ -1,0 +1,32 @@
+{
+  "task": {
+    "id": "pipeline-start",
+    "skill": "eeg-pipeline",
+    "operation": "start",
+    "request": "Produce the execution decision for this declared stage graph and saved status receipts. Reuse only passed stages, start only pending stages whose direct dependencies passed, and put failed and dependency-blocked stages in blocked. A failed stage awaits review in this plan. Return sorted lists reused, runnable, blocked. Only the next execution decision is requested.",
+    "fields": [
+      "reused",
+      "runnable",
+      "blocked"
+    ]
+  },
+  "input": {
+    "dependencies": {
+      "preprocess": [],
+      "epoch": [
+        "preprocess"
+      ],
+      "erp": [
+        "epoch"
+      ],
+      "spectral": [
+        "preprocess"
+      ],
+      "report": [
+        "erp",
+        "spectral"
+      ]
+    },
+    "status": {}
+  }
+}

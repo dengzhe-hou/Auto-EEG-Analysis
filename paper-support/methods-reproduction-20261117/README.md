@@ -4,6 +4,8 @@ These materials accompany *Reusable skills for electroencephalography analysis w
 
 The [22-skill evidence table](skill-evidence.csv) gives each tested operation, reference, outcome and scope. It preserves the complete former Supplementary Table S1 without changing any entry.
 
+The [balanced per-skill acceptance archive](../skill-acceptance-20261118/) records all 22 skills, both sets of first deliveries, the repair patch and a script to check the saved artifacts.
+
 The [retained detailed PDF](archive/Supplementary_Information.pdf) and [editable source](archive/supplementary.tex) preserve the preceding eight-page supplement. Its original note and table numbers identify that archived document, rather than the current short supplement. The archived text records the same scientific methods and results. Reorganization does not change an analysis, score or tolerance.
 
 | Material | Content |

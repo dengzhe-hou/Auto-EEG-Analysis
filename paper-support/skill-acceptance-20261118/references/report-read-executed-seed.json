@@ -1,0 +1,13 @@
+{
+  "expected": {
+    "roi_mean_uV": -1.465,
+    "n_trials": 45,
+    "status": "available",
+    "seed": 33
+  },
+  "atol": 1e-07,
+  "artifact": {
+    "kind": "report",
+    "path": "report.html"
+  }
+}

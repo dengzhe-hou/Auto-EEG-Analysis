@@ -1,0 +1,57 @@
+{
+  "task": {
+    "id": "complexity-permutation-entropy",
+    "skill": "eeg-complexity",
+    "operation": "permutation-entropy",
+    "request": "For order 3, delay 1, calculate the normalized permutation entropy of this single channel. Report pattern_counts as counts in lexicographic order of the six permutations of [0,1,2], and normalized_perm_entropy with normalization log(3!).",
+    "fields": [
+      "pattern_counts",
+      "normalized_perm_entropy"
+    ]
+  },
+  "input": {
+    "series": [
+      22,
+      16,
+      37,
+      7,
+      13,
+      3,
+      10,
+      20,
+      14,
+      12,
+      33,
+      23,
+      8,
+      31,
+      27,
+      24,
+      17,
+      34,
+      15,
+      21,
+      1,
+      29,
+      35,
+      32,
+      18,
+      9,
+      11,
+      25,
+      40,
+      36,
+      28,
+      30,
+      0,
+      6,
+      4,
+      2,
+      26,
+      38,
+      19,
+      39,
+      5
+    ]
+  }
+}

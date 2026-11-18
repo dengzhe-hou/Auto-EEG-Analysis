@@ -1,0 +1,733 @@
+[
+  {
+    "id": "audit-matched",
+    "skill": "eeg-audit",
+    "operation": "matched",
+    "request": "Act as the assigned independent reviewer of this supplied analysis record. Check the six frozen plan fields against the execution receipt. In result.json return verdict (\"pass\" or \"fail\") and issues (sorted list of mismatched field names). This is a bounded audit of agreement on these fields.",
+    "fields": [
+      "verdict",
+      "issues"
+    ]
+  },
+  {
+    "id": "audit-window",
+    "skill": "eeg-audit",
+    "operation": "window",
+    "request": "Act as the assigned independent reviewer of this supplied analysis record. Check the six frozen plan fields against the execution receipt. In result.json return verdict (\"pass\" or \"fail\") and issues (sorted list of mismatched field names). This is a bounded audit of agreement on these fields.",
+    "fields": [
+      "verdict",
+      "issues"
+    ]
+  },
+  {
+    "id": "audit-unit-of-analysis",
+    "skill": "eeg-audit",
+    "operation": "unit-of-analysis",
+    "request": "Act as the assigned independent reviewer of this supplied analysis record. Check the six frozen plan fields against the execution receipt. In result.json return verdict (\"pass\" or \"fail\") and issues (sorted list of mismatched field names). This is a bounded audit of agreement on these fields.",
+    "fields": [
+      "verdict",
+      "issues"
+    ]
+  },
+  {
+    "id": "behavior-correct-trial-rt",
+    "skill": "eeg-behavior",
+    "operation": "correct-trial-rt",
+    "request": "Summarize accuracy over all trials and mean RT in ms over correct trials only, in order A, B. Report accuracy, mean_rt_ms, and retained_rt_trials as lists.",
+    "fields": [
+      "accuracy",
+      "mean_rt_ms",
+      "retained_rt_trials"
+    ]
+  },
+  {
+    "id": "behavior-response-assignment",
+    "skill": "eeg-behavior",
+    "operation": "response-assignment",
+    "request": "Assign each stimulus the first still-unused response in [100, 350) ms after onset within its block. Process stimuli in input order. Return rt_ms as a list with null for missed trials and unused_response_ids sorted.",
+    "fields": [
+      "rt_ms",
+      "unused_response_ids"
+    ]
+  },
+  {
+    "id": "behavior-identity-join",
+    "skill": "eeg-behavior",
+    "operation": "identity-join",
+    "request": "Join EEG and behavior strictly on the trial ID, retaining EEG row order and reporting unmatched behavior IDs. On the matched trials from one subject fit OLS RT in ms against EEG in uV with an intercept. Return trial_ids, missing_on_eeg, and slope_ms_per_uV.",
+    "fields": [
+      "trial_ids",
+      "missing_on_eeg",
+      "slope_ms_per_uV"
+    ]
+  },
+  {
+    "id": "bids-signals",
+    "skill": "eeg-bids",
+    "operation": "signals",
+    "request": "Build an MNE Raw from the input, converting uV to V and preserving channel types, bad status and first_samp. Write EEG-BIDS in BrainVision format with mne-bids under bids/, subject 01, task check, no session or run. Preserve the supplied event semantics and sample identities. Set synthetic EEG reference to \"synthetic common reference\" and line_freq as supplied. Read back and report relative_event_samples (relative to first saved sample), bad_channels, and sfreq.",
+    "fields": [
+      "relative_event_samples",
+      "bad_channels",
+      "sfreq"
+    ],
+    "artifact": "bids/sub-01/eeg/sub-01_task-check_eeg.vhdr"
+  },
+  {
+    "id": "bids-channel-status",
+    "skill": "eeg-bids",
+    "operation": "channel-status",
+    "request": "Build an MNE Raw from the input, converting uV to V and preserving channel types, bad status and first_samp. Write EEG-BIDS in BrainVision format with mne-bids under bids/, subject 01, task check, no session or run. Preserve the supplied event semantics and sample identities. Set synthetic EEG reference to \"synthetic common reference\" and line_freq as supplied. Read back and report relative_event_samples (relative to first saved sample), bad_channels, and sfreq.",
+    "fields": [
+      "relative_event_samples",
+      "bad_channels",
+      "sfreq"
+    ],
+    "artifact": "bids/sub-01/eeg/sub-01_task-check_eeg.vhdr"
+  },
+  {
+    "id": "bids-sample-origin",
+    "skill": "eeg-bids",
+    "operation": "sample-origin",
+    "request": "Build an MNE Raw from the input, converting uV to V and preserving channel types, bad status and first_samp. Write EEG-BIDS in BrainVision format with mne-bids under bids/, subject 01, task check, no session or run. Preserve the supplied event semantics and sample identities. Set synthetic EEG reference to \"synthetic common reference\" and line_freq as supplied. Read back and report relative_event_samples (relative to first saved sample), bad_channels, and sfreq.",
+    "fields": [
+      "relative_event_samples",
+      "bad_channels",
+      "sfreq"
+    ],
+    "artifact": "bids/sub-01/eeg/sub-01_task-check_eeg.vhdr"
+  },
+  {
+    "id": "complexity-sampen",
+    "skill": "eeg-complexity",
+    "operation": "sampen",
+    "request": "Calculate standard sample entropy for the supplied single-channel series, m=2, threshold r=0.45 in the same units, Chebyshev strict distance < r. For both lengths use the same starting positions that permit length m+1; count unique unordered pairs and exclude self-matches. Report counts_m, counts_m_plus_1, and sample_entropy using natural logs.",
+    "fields": [
+      "counts_m",
+      "counts_m_plus_1",
+      "sample_entropy"
+    ]
+  },
+  {
+    "id": "complexity-permutation-entropy",
+    "skill": "eeg-complexity",
+    "operation": "permutation-entropy",
+    "request": "For order 3, delay 1, calculate the normalized permutation entropy of this single channel. Report pattern_counts as counts in lexicographic order of the six permutations of [0,1,2], and normalized_perm_entropy with normalization log(3!).",
+    "fields": [
+      "pattern_counts",
+      "normalized_perm_entropy"
+    ]
+  },
+  {
+    "id": "complexity-approximate-entropy",
+    "skill": "eeg-complexity",
+    "operation": "approximate-entropy",
+    "request": "Calculate approximate entropy at m=2 using Chebyshev strict distance < 0.65 and self-matches. For each embedding length use all fitting windows and take the mean log neighbor fraction. Report phi_m, phi_m_plus_1, and approximate_entropy.",
+    "fields": [
+      "phi_m",
+      "phi_m_plus_1",
+      "approximate_entropy"
+    ]
+  },
+  {
+    "id": "connectivity-pearson",
+    "skill": "eeg-connectivity",
+    "operation": "pearson",
+    "request": "Compute the off-diagonal Pearson correlations for the pairs Fz-Cz, Fz-Pz, Cz-Pz in that order and report edges. Use the whole supplied continuous signal with no preprocessing.",
+    "fields": [
+      "edges"
+    ]
+  },
+  {
+    "id": "connectivity-plv",
+    "skill": "eeg-connectivity",
+    "operation": "plv",
+    "request": "Calculate temporal PLV of two channels from the provided narrowband phase arrays in radians. Return plv and n_samples. The phase extraction has already been performed.",
+    "fields": [
+      "plv",
+      "n_samples"
+    ]
+  },
+  {
+    "id": "connectivity-debiased-wpli2",
+    "skill": "eeg-connectivity",
+    "operation": "debiased-wpli2",
+    "request": "Use trial-level imaginary cross-spectrum samples at one frequency and one edge. Return ordinary wpli and debiased squared wpli2. Use the debiased moment formula with self-products removed in both numerator and denominator.",
+    "fields": [
+      "wpli",
+      "wpli2"
+    ]
+  },
+  {
+    "id": "decoding-held-out-subjects",
+    "skill": "eeg-decoding",
+    "operation": "held-out-subjects",
+    "request": "Perform time-resolved decoding with one whole group held out at a time. At each time sample independently, fit StandardScaler inside each fold followed by LogisticRegression(C=1, solver=\"liblinear\", random_state=42, max_iter=1000). Return predictions in original row order (trial by time), accuracy at each time and chance_accuracy. These are engineering fixtures; inferential testing is outside this assigned operation.",
+    "fields": [
+      "predictions",
+      "accuracy",
+      "chance_accuracy"
+    ]
+  },
+  {
+    "id": "decoding-held-out-blocks",
+    "skill": "eeg-decoding",
+    "operation": "held-out-blocks",
+    "request": "Perform time-resolved decoding with one whole group held out at a time. At each time sample independently, fit StandardScaler inside each fold followed by LogisticRegression(C=1, solver=\"liblinear\", random_state=42, max_iter=1000). Return predictions in original row order (trial by time), accuracy at each time and chance_accuracy. These are engineering fixtures; inferential testing is outside this assigned operation.",
+    "fields": [
+      "predictions",
+      "accuracy",
+      "chance_accuracy"
+    ]
+  },
+  {
+    "id": "decoding-balanced-null",
+    "skill": "eeg-decoding",
+    "operation": "balanced-null",
+    "request": "Perform time-resolved decoding with one whole group held out at a time. At each time sample independently, fit StandardScaler inside each fold followed by LogisticRegression(C=1, solver=\"liblinear\", random_state=42, max_iter=1000). Return predictions in original row order (trial by time), accuracy at each time and chance_accuracy. These are engineering fixtures; inferential testing is outside this assigned operation.",
+    "fields": [
+      "predictions",
+      "accuracy",
+      "chance_accuracy"
+    ]
+  },
+  {
+    "id": "epoch-event-lock",
+    "skill": "eeg-epoch",
+    "operation": "event-lock",
+    "request": "Using MNE, create epochs from the source EEG in uV (convert to V), with events on the supplied raw sample grid, the indicated inclusive time limits and baseline. If reject_peak_to_peak_uV is supplied, apply it to EEG channels only. Save epochs to check-epo.fif. Return retained_event_samples, times_s and n_dropped.",
+    "fields": [
+      "retained_event_samples",
+      "times_s",
+      "n_dropped"
+    ],
+    "artifact": "check-epo.fif"
+  },
+  {
+    "id": "epoch-baseline",
+    "skill": "eeg-epoch",
+    "operation": "baseline",
+    "request": "Using MNE, create epochs from the source EEG in uV (convert to V), with events on the supplied raw sample grid, the indicated inclusive time limits and baseline. If reject_peak_to_peak_uV is supplied, apply it to EEG channels only. Save epochs to check-epo.fif. Return retained_event_samples, times_s and n_dropped.",
+    "fields": [
+      "retained_event_samples",
+      "times_s",
+      "n_dropped"
+    ],
+    "artifact": "check-epo.fif"
+  },
+  {
+    "id": "epoch-trial-rejection",
+    "skill": "eeg-epoch",
+    "operation": "trial-rejection",
+    "request": "Using MNE, create epochs from the source EEG in uV (convert to V), with events on the supplied raw sample grid, the indicated inclusive time limits and baseline. If reject_peak_to_peak_uV is supplied, apply it to EEG channels only. Save epochs to check-epo.fif. Return retained_event_samples, times_s and n_dropped.",
+    "fields": [
+      "retained_event_samples",
+      "times_s",
+      "n_dropped"
+    ],
+    "artifact": "check-epo.fif"
+  },
+  {
+    "id": "erp-condition-mean",
+    "skill": "eeg-erp",
+    "operation": "condition-mean",
+    "request": "Build MNE epochs using the supplied clean epoch arrays, with no additional processing. Calculate the condition A mean evoked waveform for all three channels. Save a single evoked to check-ave.fif. Return roi_mean_uV (equal weight over Cz/Pz and inclusive 0.1\u20130.3 s), n_window_samples, and n_condition_trials as [count A, count B].",
+    "fields": [
+      "roi_mean_uV",
+      "n_window_samples",
+      "n_condition_trials"
+    ],
+    "artifact": "check-ave.fif"
+  },
+  {
+    "id": "erp-signed-difference",
+    "skill": "eeg-erp",
+    "operation": "signed-difference",
+    "request": "Build MNE epochs using the supplied clean epoch arrays, with no additional processing. Calculate the condition B minus condition A evoked waveform for all three channels. Save a single evoked to check-ave.fif. Return roi_mean_uV (equal weight over Cz/Pz and inclusive 0.1\u20130.3 s), n_window_samples, and n_condition_trials as [count A, count B].",
+    "fields": [
+      "roi_mean_uV",
+      "n_window_samples",
+      "n_condition_trials"
+    ],
+    "artifact": "check-ave.fif"
+  },
+  {
+    "id": "erp-fixed-window-roi",
+    "skill": "eeg-erp",
+    "operation": "fixed-window-roi",
+    "request": "Build MNE epochs using the supplied clean epoch arrays, with no additional processing. Calculate the condition B minus condition A evoked waveform for all three channels. Save a single evoked to check-ave.fif. Return roi_mean_uV (equal weight over Cz/Pz and inclusive 0.1\u20130.3 s), n_window_samples, and n_condition_trials as [count A, count B].",
+    "fields": [
+      "roi_mean_uV",
+      "n_window_samples",
+      "n_condition_trials"
+    ],
+    "artifact": "check-ave.fif"
+  },
+  {
+    "id": "figure-erp-wave",
+    "skill": "eeg-figure",
+    "operation": "erp-wave",
+    "request": "Render the supplied data as a line in Matplotlib, using figsize=(4,3), fig.add_axes([.2,.2,.6,.6]), xlim=(-1,5), ylim=(-3,3), and the supplied axis labels. Set line gid=\"aea-data\". Save fig.svg without tight crop, so the actual SVG data path can be read back. Return n_points and x_label and y_label.",
+    "fields": [
+      "n_points",
+      "x_label",
+      "y_label"
+    ],
+    "artifact": "fig.svg"
+  },
+  {
+    "id": "figure-delta-wave",
+    "skill": "eeg-figure",
+    "operation": "delta-wave",
+    "request": "Render the supplied data as a line in Matplotlib, using figsize=(4,3), fig.add_axes([.2,.2,.6,.6]), xlim=(-1,5), ylim=(-3,3), and the supplied axis labels. Set line gid=\"aea-data\". Save fig.svg without tight crop, so the actual SVG data path can be read back. Return n_points and x_label and y_label.",
+    "fields": [
+      "n_points",
+      "x_label",
+      "y_label"
+    ],
+    "artifact": "fig.svg"
+  },
+  {
+    "id": "figure-spectrum",
+    "skill": "eeg-figure",
+    "operation": "spectrum",
+    "request": "Render the supplied data as a line in Matplotlib, using figsize=(4,3), fig.add_axes([.2,.2,.6,.6]), xlim=(-1,5), ylim=(-3,3), and the supplied axis labels. Set line gid=\"aea-data\". Save fig.svg without tight crop, so the actual SVG data path can be read back. Return n_points and x_label and y_label.",
+    "fields": [
+      "n_points",
+      "x_label",
+      "y_label"
+    ],
+    "artifact": "fig.svg"
+  },
+  {
+    "id": "group-compare-welch-two-group",
+    "skill": "eeg-group-compare",
+    "operation": "welch-two-group",
+    "request": "Test independent participant-level summaries using two-sided independent Welch t test. Return statistic, p_value and n_per_group in input order. Each element is one participant value. Check the specified test path and unit of analysis; no cluster inference is assigned.",
+    "fields": [
+      "statistic",
+      "p_value",
+      "n_per_group"
+    ]
+  },
+  {
+    "id": "group-compare-paired-subjects",
+    "skill": "eeg-group-compare",
+    "operation": "paired-subjects",
+    "request": "Test independent participant-level summaries using two-sided paired t test on A minus B. Return statistic, p_value and n_per_group in input order. Each element is one participant value. Check the specified test path and unit of analysis; no cluster inference is assigned.",
+    "fields": [
+      "statistic",
+      "p_value",
+      "n_per_group"
+    ]
+  },
+  {
+    "id": "group-compare-one-way-f",
+    "skill": "eeg-group-compare",
+    "operation": "one-way-f",
+    "request": "Test independent participant-level summaries using one-way between-subject ANOVA. Return statistic, p_value and n_per_group in input order. Each element is one participant value. Check the specified test path and unit of analysis; no cluster inference is assigned.",
+    "fields": [
+      "statistic",
+      "p_value",
+      "n_per_group"
+    ]
+  },
+  {
+    "id": "ica-replay-none",
+    "skill": "eeg-ica",
+    "operation": "replay-none",
+    "request": "Apply the supplied fixed full-rank ICA decomposition to these centered data. Use the matching saved unmixing/mixing pair, zero only the approved component indices and reconstruct. Do not refit. Return cleaned_uV (channel by sample) and applied_exclusions.",
+    "fields": [
+      "cleaned_uV",
+      "applied_exclusions"
+    ]
+  },
+  {
+    "id": "ica-remove-one",
+    "skill": "eeg-ica",
+    "operation": "remove-one",
+    "request": "Apply the supplied fixed full-rank ICA decomposition to these centered data. Use the matching saved unmixing/mixing pair, zero only the approved component indices and reconstruct. Do not refit. Return cleaned_uV (channel by sample) and applied_exclusions.",
+    "fields": [
+      "cleaned_uV",
+      "applied_exclusions"
+    ]
+  },
+  {
+    "id": "ica-remove-two",
+    "skill": "eeg-ica",
+    "operation": "remove-two",
+    "request": "Apply the supplied fixed full-rank ICA decomposition to these centered data. Use the matching saved unmixing/mixing pair, zero only the approved component indices and reconstruct. Do not refit. Return cleaned_uV (channel by sample) and applied_exclusions.",
+    "fields": [
+      "cleaned_uV",
+      "applied_exclusions"
+    ]
+  },
+  {
+    "id": "methods-text-acquisition",
+    "skill": "eeg-methods-text",
+    "operation": "acquisition",
+    "request": "Draft a concise, truthful Methods paragraph from the acquisition and executed-stage records. Save methods.md with the paragraph plus one machine-readable line of the form field = value for each requested result field. Use 'not recorded' for absent reference. Report actual retained trial count, executed seed, and epoch times in s. Save the same field values as result.json.",
+    "fields": [
+      "sampling_hz",
+      "reference",
+      "retained_trials",
+      "seed",
+      "epoch_start_s",
+      "epoch_end_s"
+    ],
+    "artifact": "methods.md"
+  },
+  {
+    "id": "methods-text-epoching",
+    "skill": "eeg-methods-text",
+    "operation": "epoching",
+    "request": "Draft a concise, truthful Methods paragraph from the acquisition and executed-stage records. Save methods.md with the paragraph plus one machine-readable line of the form field = value for each requested result field. Use 'not recorded' for absent reference. Report actual retained trial count, executed seed, and epoch times in s. Save the same field values as result.json.",
+    "fields": [
+      "sampling_hz",
+      "reference",
+      "retained_trials",
+      "seed",
+      "epoch_start_s",
+      "epoch_end_s"
+    ],
+    "artifact": "methods.md"
+  },
+  {
+    "id": "methods-text-retained-and-seed",
+    "skill": "eeg-methods-text",
+    "operation": "retained-and-seed",
+    "request": "Draft a concise, truthful Methods paragraph from the acquisition and executed-stage records. Save methods.md with the paragraph plus one machine-readable line of the form field = value for each requested result field. Use 'not recorded' for absent reference. Report actual retained trial count, executed seed, and epoch times in s. Save the same field values as result.json.",
+    "fields": [
+      "sampling_hz",
+      "reference",
+      "retained_trials",
+      "seed",
+      "epoch_start_s",
+      "epoch_end_s"
+    ],
+    "artifact": "methods.md"
+  },
+  {
+    "id": "microstate-transitions",
+    "skill": "eeg-microstate",
+    "operation": "transitions",
+    "request": "Calculate the observed transition count and row-normalized probability matrices for labels 0\u20132. Skip adjacent repeats and all pairs touching -1, with no bridging gaps. Report counts and probabilities (source row, destination column).",
+    "fields": [
+      "counts",
+      "probabilities"
+    ]
+  },
+  {
+    "id": "microstate-coverage",
+    "skill": "eeg-microstate",
+    "operation": "coverage",
+    "request": "Compute each state coverage as percent of labeled samples, in order 0,1,2. Return coverage_pct and n_labeled.",
+    "fields": [
+      "coverage_pct",
+      "n_labeled"
+    ]
+  },
+  {
+    "id": "microstate-gev",
+    "skill": "eeg-microstate",
+    "operation": "gev",
+    "request": "Calculate the per-state GEV and total GEV from the supplied spatial correlation to each sample assigned state and GFP, using GFP-squared weighting. Denominator includes all sample powers, with no numerator contribution from unlabeled samples. Return gev_by_state in order 0,1,2 and gev_total as fractions.",
+    "fields": [
+      "gev_by_state",
+      "gev_total"
+    ]
+  },
+  {
+    "id": "pipeline-start",
+    "skill": "eeg-pipeline",
+    "operation": "start",
+    "request": "Produce the execution decision for this declared stage graph and saved status receipts. Reuse only passed stages, start only pending stages whose direct dependencies passed, and put failed and dependency-blocked stages in blocked. A failed stage awaits review in this plan. Return sorted lists reused, runnable, blocked. Only the next execution decision is requested.",
+    "fields": [
+      "reused",
+      "runnable",
+      "blocked"
+    ]
+  },
+  {
+    "id": "pipeline-resume",
+    "skill": "eeg-pipeline",
+    "operation": "resume",
+    "request": "Produce the execution decision for this declared stage graph and saved status receipts. Reuse only passed stages, start only pending stages whose direct dependencies passed, and put failed and dependency-blocked stages in blocked. A failed stage awaits review in this plan. Return sorted lists reused, runnable, blocked. Only the next execution decision is requested.",
+    "fields": [
+      "reused",
+      "runnable",
+      "blocked"
+    ]
+  },
+  {
+    "id": "pipeline-blocked-stage",
+    "skill": "eeg-pipeline",
+    "operation": "blocked-stage",
+    "request": "Produce the execution decision for this declared stage graph and saved status receipts. Reuse only passed stages, start only pending stages whose direct dependencies passed, and put failed and dependency-blocked stages in blocked. A failed stage awaits review in this plan. Return sorted lists reused, runnable, blocked. Only the next execution decision is requested.",
+    "fields": [
+      "reused",
+      "runnable",
+      "blocked"
+    ]
+  },
+  {
+    "id": "preprocess-reference",
+    "skill": "eeg-preprocess",
+    "operation": "reference",
+    "request": "Apply average reference to EEG only with no projection or optional filtering. Keep EOG unchanged. Report full samples_uV in original row order and channel_names.",
+    "fields": [
+      "samples_uV",
+      "channel_names"
+    ]
+  },
+  {
+    "id": "preprocess-channels-and-crop",
+    "skill": "eeg-preprocess",
+    "operation": "channels-and-crop",
+    "request": "Select channels in requested order and crop by half-open sample interval [45, 123) of the original recording. Report samples_uV and channel_names without any other processing.",
+    "fields": [
+      "samples_uV",
+      "channel_names"
+    ]
+  },
+  {
+    "id": "preprocess-resample-events",
+    "skill": "eeg-preprocess",
+    "operation": "resample-events",
+    "request": "Resample the three EEG channels to 50 Hz using MNE resample, method fft, npad=0, boxcar window and jointly supplied events. All events are on both grids. Report new_sfreq, relative_event_samples, and samples_uV without another preprocessing step.",
+    "fields": [
+      "new_sfreq",
+      "relative_event_samples",
+      "samples_uV"
+    ]
+  },
+  {
+    "id": "qc-clean",
+    "skill": "eeg-qc",
+    "operation": "clean",
+    "request": "Evaluate the AEA amplitude QC rule on two EEG channels. Convert uV to V for the amplitude helper. Report sorted constant_channels and rapid_change_channels by their segment names, and bad_channel_candidates using the declared 5% duration criterion. Run QC on the original samples without applying cleaning or annotation changes.",
+    "fields": [
+      "constant_channels",
+      "rapid_change_channels",
+      "bad_channel_candidates"
+    ]
+  },
+  {
+    "id": "qc-constant-channel",
+    "skill": "eeg-qc",
+    "operation": "constant-channel",
+    "request": "Evaluate the AEA amplitude QC rule on two EEG channels. Convert uV to V for the amplitude helper. Report sorted constant_channels and rapid_change_channels by their segment names, and bad_channel_candidates using the declared 5% duration criterion. Run QC on the original samples without applying cleaning or annotation changes.",
+    "fields": [
+      "constant_channels",
+      "rapid_change_channels",
+      "bad_channel_candidates"
+    ]
+  },
+  {
+    "id": "qc-rapid-step",
+    "skill": "eeg-qc",
+    "operation": "rapid-step",
+    "request": "Evaluate the AEA amplitude QC rule on two EEG channels. Convert uV to V for the amplitude helper. Report sorted constant_channels and rapid_change_channels by their segment names, and bad_channel_candidates using the declared 5% duration criterion. Run QC on the original samples without applying cleaning or annotation changes.",
+    "fields": [
+      "constant_channels",
+      "rapid_change_channels",
+      "bad_channel_candidates"
+    ]
+  },
+  {
+    "id": "recipe-meets-minimum",
+    "skill": "eeg-recipe",
+    "operation": "meets-minimum",
+    "request": "Check applicability of the AEA n400-semantic recipe from its frozen RECIPE.md header. Verify the supplied post-rejection counts, required markers, sampling rate, and channel count. Return eligible, missing_markers (sorted), insufficient_present_markers (sorted), and recipe_version. This is the recipe preflight operation.",
+    "fields": [
+      "eligible",
+      "missing_markers",
+      "insufficient_present_markers",
+      "recipe_version"
+    ]
+  },
+  {
+    "id": "recipe-missing-marker",
+    "skill": "eeg-recipe",
+    "operation": "missing-marker",
+    "request": "Check applicability of the AEA n400-semantic recipe from its frozen RECIPE.md header. Verify the supplied post-rejection counts, required markers, sampling rate, and channel count. Return eligible, missing_markers (sorted), insufficient_present_markers (sorted), and recipe_version. This is the recipe preflight operation.",
+    "fields": [
+      "eligible",
+      "missing_markers",
+      "insufficient_present_markers",
+      "recipe_version"
+    ]
+  },
+  {
+    "id": "recipe-insufficient-trials",
+    "skill": "eeg-recipe",
+    "operation": "insufficient-trials",
+    "request": "Check applicability of the AEA n400-semantic recipe from its frozen RECIPE.md header. Verify the supplied post-rejection counts, required markers, sampling rate, and channel count. Return eligible, missing_markers (sorted), insufficient_present_markers (sorted), and recipe_version. This is the recipe preflight operation.",
+    "fields": [
+      "eligible",
+      "missing_markers",
+      "insufficient_present_markers",
+      "recipe_version"
+    ]
+  },
+  {
+    "id": "report-recorded-summary",
+    "skill": "eeg-report",
+    "operation": "recorded-summary",
+    "request": "Write report.html and REPRO_RECEIPT.md from the supplied executed-stage record. Use an HTML element with id matching each required key and its value as plain text (use \"null\" for missing value); round continuous values to 3 decimals in HTML only. Include the literal source artifact filename and executed seed in the reproducibility receipt. Return result.json with the same four facts at full precision.",
+    "fields": [
+      "roi_mean_uV",
+      "n_trials",
+      "status",
+      "seed"
+    ],
+    "artifact": "report.html"
+  },
+  {
+    "id": "report-include-missing",
+    "skill": "eeg-report",
+    "operation": "include-missing",
+    "request": "Write report.html and REPRO_RECEIPT.md from the supplied executed-stage record. Use an HTML element with id matching each required key and its value as plain text (use \"null\" for missing value); round continuous values to 3 decimals in HTML only. Include the literal source artifact filename and executed seed in the reproducibility receipt. Return result.json with the same four facts at full precision.",
+    "fields": [
+      "roi_mean_uV",
+      "n_trials",
+      "status",
+      "seed"
+    ],
+    "artifact": "report.html"
+  },
+  {
+    "id": "report-read-executed-seed",
+    "skill": "eeg-report",
+    "operation": "read-executed-seed",
+    "request": "Write report.html and REPRO_RECEIPT.md from the supplied executed-stage record. Use an HTML element with id matching each required key and its value as plain text (use \"null\" for missing value); round continuous values to 3 decimals in HTML only. Include the literal source artifact filename and executed seed in the reproducibility receipt. Return result.json with the same four facts at full precision.",
+    "fields": [
+      "roi_mean_uV",
+      "n_trials",
+      "status",
+      "seed"
+    ],
+    "artifact": "report.html"
+  },
+  {
+    "id": "source-ridge-inverse",
+    "skill": "eeg-source",
+    "operation": "ridge-inverse",
+    "request": "Use this fixed-orientation, referenced, supplied lead field and sensor covariance. Compute the identity-source-prior minimum-norm inverse with K=G.T @ inv(G@G.T + lambda2*C). Divide each source row by sqrt(diag(K@C@K.T)) only if normalize_noise is true. Report source_estimates and normalized (boolean).",
+    "fields": [
+      "source_estimates",
+      "normalized"
+    ]
+  },
+  {
+    "id": "source-noise-normalized",
+    "skill": "eeg-source",
+    "operation": "noise-normalized",
+    "request": "Use this fixed-orientation, referenced, supplied lead field and sensor covariance. Compute the identity-source-prior minimum-norm inverse with K=G.T @ inv(G@G.T + lambda2*C). Divide each source row by sqrt(diag(K@C@K.T)) only if normalize_noise is true. Report source_estimates and normalized (boolean).",
+    "fields": [
+      "source_estimates",
+      "normalized"
+    ]
+  },
+  {
+    "id": "source-strong-regularization",
+    "skill": "eeg-source",
+    "operation": "strong-regularization",
+    "request": "Use this fixed-orientation, referenced, supplied lead field and sensor covariance. Compute the identity-source-prior minimum-norm inverse with K=G.T @ inv(G@G.T + lambda2*C). Divide each source row by sqrt(diag(K@C@K.T)) only if normalize_noise is true. Report source_estimates and normalized (boolean).",
+    "fields": [
+      "source_estimates",
+      "normalized"
+    ]
+  },
+  {
+    "id": "spectral-welch-band-power",
+    "skill": "eeg-spectral",
+    "operation": "welch-band-power",
+    "request": "Compute one-sided mean Welch PSD in uV^2/Hz using periodic Hann, segment demeaning and explicit n_fft, n_per_seg and overlap. Return alpha_power_uV2 as sum of PSD bins from 8 through 12 Hz inclusive times df.",
+    "fields": [
+      "alpha_power_uV2"
+    ]
+  },
+  {
+    "id": "spectral-peak-frequency",
+    "skill": "eeg-spectral",
+    "operation": "peak-frequency",
+    "request": "Compute one-sided mean Welch PSD in uV^2/Hz using periodic Hann, segment demeaning and explicit n_fft, n_per_seg and overlap. Return alpha_peak_hz from the maximum bin in [8,12] Hz and its psd_uV2_per_hz.",
+    "fields": [
+      "alpha_peak_hz",
+      "psd_uV2_per_hz"
+    ]
+  },
+  {
+    "id": "spectral-relative-power",
+    "skill": "eeg-spectral",
+    "operation": "relative-power",
+    "request": "Compute one-sided mean Welch PSD in uV^2/Hz using periodic Hann, segment demeaning and explicit n_fft, n_per_seg and overlap. Return beta_fraction from sum of PSD bins in [15,30] Hz divided by sum in [2,40] Hz.",
+    "fields": [
+      "beta_fraction"
+    ]
+  },
+  {
+    "id": "stats-one-sample-t",
+    "skill": "eeg-stats",
+    "operation": "one-sample-t",
+    "request": "Test the six supplied participant contrasts against zero using a two-sided one-sample t test. Report t, df and p_two_sided. Keep the participant as the observation unit.",
+    "fields": [
+      "t",
+      "df",
+      "p_two_sided"
+    ]
+  },
+  {
+    "id": "stats-paired-effect",
+    "skill": "eeg-stats",
+    "operation": "paired-effect",
+    "request": "For the paired participant contrasts, compute Cohen dz with ddof=1, mean_difference and the two-sided 95% t interval ci95 on the mean.",
+    "fields": [
+      "dz",
+      "mean_difference",
+      "ci95"
+    ]
+  },
+  {
+    "id": "stats-exact-sign-flip",
+    "skill": "eeg-stats",
+    "operation": "exact-sign-flip",
+    "request": "For the five participant contrasts, calculate the exact two-sided sign-flip test using the absolute mean as statistic. Include all 2^5 patterns including the observed, ties count as extreme, no added pseudocount. Report observed_abs_mean, n_patterns, and p_exact.",
+    "fields": [
+      "observed_abs_mean",
+      "n_patterns",
+      "p_exact"
+    ]
+  },
+  {
+    "id": "tfr-morlet-power",
+    "skill": "eeg-tfr",
+    "operation": "morlet-power",
+    "request": "Compute zero-mean Morlet at 10 Hz, 5 cycles, decim=1, from the supplied epoched signals with tmin=-1 s. No other preprocessing. Return values equal to average power in uV^2 for each channel at the given zero-based sample_indices, and times_s at those sample indices.",
+    "fields": [
+      "values",
+      "times_s"
+    ]
+  },
+  {
+    "id": "tfr-morlet-itc",
+    "skill": "eeg-tfr",
+    "operation": "morlet-itc",
+    "request": "Compute zero-mean Morlet at 10 Hz, 5 cycles, decim=1, from the supplied epoched signals with tmin=-1 s. No other preprocessing. Return values equal to ITC from the complex trial coefficients for each channel at the given zero-based sample_indices, and times_s at those sample indices.",
+    "fields": [
+      "values",
+      "times_s"
+    ]
+  },
+  {
+    "id": "tfr-baseline-logratio",
+    "skill": "eeg-tfr",
+    "operation": "baseline-logratio",
+    "request": "Compute zero-mean Morlet at 10 Hz, 5 cycles, decim=1, from the supplied epoched signals with tmin=-1 s. No other preprocessing. Return values equal to log10(power / mean baseline power) with inclusive baseline [-0.5,-0.125] s for each channel at the given zero-based sample_indices, and times_s at those sample indices.",
+    "fields": [
+      "values",
+      "times_s"
+    ]
+  }
+]

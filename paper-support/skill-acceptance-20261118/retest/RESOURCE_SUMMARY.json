@@ -1,0 +1,9 @@
+{
+  "wall_seconds": 3394.0,
+  "cpu_seconds": 1304.437,
+  "allocated_cpu_seconds": 3394.0,
+  "sampled_peak_step_rss_kib": 1014876,
+  "cpu_efficiency_pct": 38.433618149675894,
+  "gpu_requested": 0,
+  "same_shape_future_batch_timelimit_minutes": 15
+}

@@ -1,0 +1,44 @@
+{
+  "task": {
+    "id": "behavior-response-assignment",
+    "skill": "eeg-behavior",
+    "operation": "response-assignment",
+    "request": "Assign each stimulus the first still-unused response in [100, 350) ms after onset within its block. Process stimuli in input order. Return rt_ms as a list with null for missed trials and unused_response_ids sorted.",
+    "fields": [
+      "rt_ms",
+      "unused_response_ids"
+    ]
+  },
+  "input": {
+    "stimulus_ms": [
+      10,
+      420,
+      550,
+      1010
+    ],
+    "stimulus_blocks": [
+      "a",
+      "a",
+      "a",
+      "b"
+    ],
+    "response_ms": [
+      170,
+      670,
+      1190,
+      1250
+    ],
+    "response_blocks": [
+      "a",
+      "a",
+      "b",
+      "b"
+    ],
+    "response_ids": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}

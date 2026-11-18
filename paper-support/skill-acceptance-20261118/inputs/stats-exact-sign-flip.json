@@ -1,0 +1,22 @@
+{
+  "task": {
+    "id": "stats-exact-sign-flip",
+    "skill": "eeg-stats",
+    "operation": "exact-sign-flip",
+    "request": "For the five participant contrasts, calculate the exact two-sided sign-flip test using the absolute mean as statistic. Include all 2^5 patterns including the observed, ties count as extreme, no added pseudocount. Report observed_abs_mean, n_patterns, and p_exact.",
+    "fields": [
+      "observed_abs_mean",
+      "n_patterns",
+      "p_exact"
+    ]
+  },
+  "input": {
+    "contrasts": [
+      1,
+      6,
+      3,
+      -1,
+      2
+    ]
+  }
+}

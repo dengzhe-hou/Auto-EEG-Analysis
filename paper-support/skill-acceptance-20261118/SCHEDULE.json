@@ -1,0 +1,1190 @@
+[
+  {
+    "task": "methods-text-acquisition",
+    "skill": "eeg-methods-text",
+    "rep": 1,
+    "session": "skills66__methods-text-acquisition__rep1"
+  },
+  {
+    "task": "audit-unit-of-analysis",
+    "skill": "eeg-audit",
+    "rep": 1,
+    "session": "skills66__audit-unit-of-analysis__rep1"
+  },
+  {
+    "task": "behavior-response-assignment",
+    "skill": "eeg-behavior",
+    "rep": 1,
+    "session": "skills66__behavior-response-assignment__rep1"
+  },
+  {
+    "task": "epoch-baseline",
+    "skill": "eeg-epoch",
+    "rep": 1,
+    "session": "skills66__epoch-baseline__rep1"
+  },
+  {
+    "task": "decoding-held-out-blocks",
+    "skill": "eeg-decoding",
+    "rep": 1,
+    "session": "skills66__decoding-held-out-blocks__rep1"
+  },
+  {
+    "task": "qc-constant-channel",
+    "skill": "eeg-qc",
+    "rep": 1,
+    "session": "skills66__qc-constant-channel__rep1"
+  },
+  {
+    "task": "qc-clean",
+    "skill": "eeg-qc",
+    "rep": 1,
+    "session": "skills66__qc-clean__rep1"
+  },
+  {
+    "task": "microstate-coverage",
+    "skill": "eeg-microstate",
+    "rep": 1,
+    "session": "skills66__microstate-coverage__rep1"
+  },
+  {
+    "task": "preprocess-channels-and-crop",
+    "skill": "eeg-preprocess",
+    "rep": 1,
+    "session": "skills66__preprocess-channels-and-crop__rep1"
+  },
+  {
+    "task": "erp-signed-difference",
+    "skill": "eeg-erp",
+    "rep": 1,
+    "session": "skills66__erp-signed-difference__rep1"
+  },
+  {
+    "task": "stats-paired-effect",
+    "skill": "eeg-stats",
+    "rep": 1,
+    "session": "skills66__stats-paired-effect__rep1"
+  },
+  {
+    "task": "complexity-permutation-entropy",
+    "skill": "eeg-complexity",
+    "rep": 1,
+    "session": "skills66__complexity-permutation-entropy__rep1"
+  },
+  {
+    "task": "complexity-approximate-entropy",
+    "skill": "eeg-complexity",
+    "rep": 1,
+    "session": "skills66__complexity-approximate-entropy__rep1"
+  },
+  {
+    "task": "methods-text-epoching",
+    "skill": "eeg-methods-text",
+    "rep": 1,
+    "session": "skills66__methods-text-epoching__rep1"
+  },
+  {
+    "task": "preprocess-resample-events",
+    "skill": "eeg-preprocess",
+    "rep": 1,
+    "session": "skills66__preprocess-resample-events__rep1"
+  },
+  {
+    "task": "group-compare-one-way-f",
+    "skill": "eeg-group-compare",
+    "rep": 1,
+    "session": "skills66__group-compare-one-way-f__rep1"
+  },
+  {
+    "task": "stats-exact-sign-flip",
+    "skill": "eeg-stats",
+    "rep": 1,
+    "session": "skills66__stats-exact-sign-flip__rep1"
+  },
+  {
+    "task": "spectral-peak-frequency",
+    "skill": "eeg-spectral",
+    "rep": 1,
+    "session": "skills66__spectral-peak-frequency__rep1"
+  },
+  {
+    "task": "microstate-gev",
+    "skill": "eeg-microstate",
+    "rep": 1,
+    "session": "skills66__microstate-gev__rep1"
+  },
+  {
+    "task": "group-compare-welch-two-group",
+    "skill": "eeg-group-compare",
+    "rep": 1,
+    "session": "skills66__group-compare-welch-two-group__rep1"
+  },
+  {
+    "task": "source-ridge-inverse",
+    "skill": "eeg-source",
+    "rep": 1,
+    "session": "skills66__source-ridge-inverse__rep1"
+  },
+  {
+    "task": "tfr-morlet-itc",
+    "skill": "eeg-tfr",
+    "rep": 1,
+    "session": "skills66__tfr-morlet-itc__rep1"
+  },
+  {
+    "task": "behavior-identity-join",
+    "skill": "eeg-behavior",
+    "rep": 1,
+    "session": "skills66__behavior-identity-join__rep1"
+  },
+  {
+    "task": "epoch-event-lock",
+    "skill": "eeg-epoch",
+    "rep": 1,
+    "session": "skills66__epoch-event-lock__rep1"
+  },
+  {
+    "task": "tfr-baseline-logratio",
+    "skill": "eeg-tfr",
+    "rep": 1,
+    "session": "skills66__tfr-baseline-logratio__rep1"
+  },
+  {
+    "task": "recipe-missing-marker",
+    "skill": "eeg-recipe",
+    "rep": 1,
+    "session": "skills66__recipe-missing-marker__rep1"
+  },
+  {
+    "task": "audit-matched",
+    "skill": "eeg-audit",
+    "rep": 1,
+    "session": "skills66__audit-matched__rep1"
+  },
+  {
+    "task": "erp-condition-mean",
+    "skill": "eeg-erp",
+    "rep": 1,
+    "session": "skills66__erp-condition-mean__rep1"
+  },
+  {
+    "task": "recipe-meets-minimum",
+    "skill": "eeg-recipe",
+    "rep": 1,
+    "session": "skills66__recipe-meets-minimum__rep1"
+  },
+  {
+    "task": "report-include-missing",
+    "skill": "eeg-report",
+    "rep": 1,
+    "session": "skills66__report-include-missing__rep1"
+  },
+  {
+    "task": "ica-replay-none",
+    "skill": "eeg-ica",
+    "rep": 1,
+    "session": "skills66__ica-replay-none__rep1"
+  },
+  {
+    "task": "source-noise-normalized",
+    "skill": "eeg-source",
+    "rep": 1,
+    "session": "skills66__source-noise-normalized__rep1"
+  },
+  {
+    "task": "decoding-balanced-null",
+    "skill": "eeg-decoding",
+    "rep": 1,
+    "session": "skills66__decoding-balanced-null__rep1"
+  },
+  {
+    "task": "ica-remove-one",
+    "skill": "eeg-ica",
+    "rep": 1,
+    "session": "skills66__ica-remove-one__rep1"
+  },
+  {
+    "task": "bids-sample-origin",
+    "skill": "eeg-bids",
+    "rep": 1,
+    "session": "skills66__bids-sample-origin__rep1"
+  },
+  {
+    "task": "connectivity-pearson",
+    "skill": "eeg-connectivity",
+    "rep": 1,
+    "session": "skills66__connectivity-pearson__rep1"
+  },
+  {
+    "task": "connectivity-plv",
+    "skill": "eeg-connectivity",
+    "rep": 1,
+    "session": "skills66__connectivity-plv__rep1"
+  },
+  {
+    "task": "spectral-welch-band-power",
+    "skill": "eeg-spectral",
+    "rep": 1,
+    "session": "skills66__spectral-welch-band-power__rep1"
+  },
+  {
+    "task": "spectral-relative-power",
+    "skill": "eeg-spectral",
+    "rep": 1,
+    "session": "skills66__spectral-relative-power__rep1"
+  },
+  {
+    "task": "tfr-morlet-power",
+    "skill": "eeg-tfr",
+    "rep": 1,
+    "session": "skills66__tfr-morlet-power__rep1"
+  },
+  {
+    "task": "preprocess-reference",
+    "skill": "eeg-preprocess",
+    "rep": 1,
+    "session": "skills66__preprocess-reference__rep1"
+  },
+  {
+    "task": "source-strong-regularization",
+    "skill": "eeg-source",
+    "rep": 1,
+    "session": "skills66__source-strong-regularization__rep1"
+  },
+  {
+    "task": "epoch-trial-rejection",
+    "skill": "eeg-epoch",
+    "rep": 1,
+    "session": "skills66__epoch-trial-rejection__rep1"
+  },
+  {
+    "task": "pipeline-resume",
+    "skill": "eeg-pipeline",
+    "rep": 1,
+    "session": "skills66__pipeline-resume__rep1"
+  },
+  {
+    "task": "erp-fixed-window-roi",
+    "skill": "eeg-erp",
+    "rep": 1,
+    "session": "skills66__erp-fixed-window-roi__rep1"
+  },
+  {
+    "task": "behavior-correct-trial-rt",
+    "skill": "eeg-behavior",
+    "rep": 1,
+    "session": "skills66__behavior-correct-trial-rt__rep1"
+  },
+  {
+    "task": "complexity-sampen",
+    "skill": "eeg-complexity",
+    "rep": 1,
+    "session": "skills66__complexity-sampen__rep1"
+  },
+  {
+    "task": "methods-text-retained-and-seed",
+    "skill": "eeg-methods-text",
+    "rep": 1,
+    "session": "skills66__methods-text-retained-and-seed__rep1"
+  },
+  {
+    "task": "report-read-executed-seed",
+    "skill": "eeg-report",
+    "rep": 1,
+    "session": "skills66__report-read-executed-seed__rep1"
+  },
+  {
+    "task": "bids-signals",
+    "skill": "eeg-bids",
+    "rep": 1,
+    "session": "skills66__bids-signals__rep1"
+  },
+  {
+    "task": "figure-spectrum",
+    "skill": "eeg-figure",
+    "rep": 1,
+    "session": "skills66__figure-spectrum__rep1"
+  },
+  {
+    "task": "pipeline-blocked-stage",
+    "skill": "eeg-pipeline",
+    "rep": 1,
+    "session": "skills66__pipeline-blocked-stage__rep1"
+  },
+  {
+    "task": "pipeline-start",
+    "skill": "eeg-pipeline",
+    "rep": 1,
+    "session": "skills66__pipeline-start__rep1"
+  },
+  {
+    "task": "bids-channel-status",
+    "skill": "eeg-bids",
+    "rep": 1,
+    "session": "skills66__bids-channel-status__rep1"
+  },
+  {
+    "task": "qc-rapid-step",
+    "skill": "eeg-qc",
+    "rep": 1,
+    "session": "skills66__qc-rapid-step__rep1"
+  },
+  {
+    "task": "decoding-held-out-subjects",
+    "skill": "eeg-decoding",
+    "rep": 1,
+    "session": "skills66__decoding-held-out-subjects__rep1"
+  },
+  {
+    "task": "group-compare-paired-subjects",
+    "skill": "eeg-group-compare",
+    "rep": 1,
+    "session": "skills66__group-compare-paired-subjects__rep1"
+  },
+  {
+    "task": "report-recorded-summary",
+    "skill": "eeg-report",
+    "rep": 1,
+    "session": "skills66__report-recorded-summary__rep1"
+  },
+  {
+    "task": "stats-one-sample-t",
+    "skill": "eeg-stats",
+    "rep": 1,
+    "session": "skills66__stats-one-sample-t__rep1"
+  },
+  {
+    "task": "microstate-transitions",
+    "skill": "eeg-microstate",
+    "rep": 1,
+    "session": "skills66__microstate-transitions__rep1"
+  },
+  {
+    "task": "recipe-insufficient-trials",
+    "skill": "eeg-recipe",
+    "rep": 1,
+    "session": "skills66__recipe-insufficient-trials__rep1"
+  },
+  {
+    "task": "ica-remove-two",
+    "skill": "eeg-ica",
+    "rep": 1,
+    "session": "skills66__ica-remove-two__rep1"
+  },
+  {
+    "task": "figure-erp-wave",
+    "skill": "eeg-figure",
+    "rep": 1,
+    "session": "skills66__figure-erp-wave__rep1"
+  },
+  {
+    "task": "figure-delta-wave",
+    "skill": "eeg-figure",
+    "rep": 1,
+    "session": "skills66__figure-delta-wave__rep1"
+  },
+  {
+    "task": "audit-window",
+    "skill": "eeg-audit",
+    "rep": 1,
+    "session": "skills66__audit-window__rep1"
+  },
+  {
+    "task": "connectivity-debiased-wpli2",
+    "skill": "eeg-connectivity",
+    "rep": 1,
+    "session": "skills66__connectivity-debiased-wpli2__rep1"
+  },
+  {
+    "task": "methods-text-acquisition",
+    "skill": "eeg-methods-text",
+    "rep": 2,
+    "session": "skills66__methods-text-acquisition__rep2"
+  },
+  {
+    "task": "audit-unit-of-analysis",
+    "skill": "eeg-audit",
+    "rep": 2,
+    "session": "skills66__audit-unit-of-analysis__rep2"
+  },
+  {
+    "task": "behavior-response-assignment",
+    "skill": "eeg-behavior",
+    "rep": 2,
+    "session": "skills66__behavior-response-assignment__rep2"
+  },
+  {
+    "task": "epoch-baseline",
+    "skill": "eeg-epoch",
+    "rep": 2,
+    "session": "skills66__epoch-baseline__rep2"
+  },
+  {
+    "task": "decoding-held-out-blocks",
+    "skill": "eeg-decoding",
+    "rep": 2,
+    "session": "skills66__decoding-held-out-blocks__rep2"
+  },
+  {
+    "task": "qc-constant-channel",
+    "skill": "eeg-qc",
+    "rep": 2,
+    "session": "skills66__qc-constant-channel__rep2"
+  },
+  {
+    "task": "qc-clean",
+    "skill": "eeg-qc",
+    "rep": 2,
+    "session": "skills66__qc-clean__rep2"
+  },
+  {
+    "task": "microstate-coverage",
+    "skill": "eeg-microstate",
+    "rep": 2,
+    "session": "skills66__microstate-coverage__rep2"
+  },
+  {
+    "task": "preprocess-channels-and-crop",
+    "skill": "eeg-preprocess",
+    "rep": 2,
+    "session": "skills66__preprocess-channels-and-crop__rep2"
+  },
+  {
+    "task": "erp-signed-difference",
+    "skill": "eeg-erp",
+    "rep": 2,
+    "session": "skills66__erp-signed-difference__rep2"
+  },
+  {
+    "task": "stats-paired-effect",
+    "skill": "eeg-stats",
+    "rep": 2,
+    "session": "skills66__stats-paired-effect__rep2"
+  },
+  {
+    "task": "complexity-permutation-entropy",
+    "skill": "eeg-complexity",
+    "rep": 2,
+    "session": "skills66__complexity-permutation-entropy__rep2"
+  },
+  {
+    "task": "complexity-approximate-entropy",
+    "skill": "eeg-complexity",
+    "rep": 2,
+    "session": "skills66__complexity-approximate-entropy__rep2"
+  },
+  {
+    "task": "methods-text-epoching",
+    "skill": "eeg-methods-text",
+    "rep": 2,
+    "session": "skills66__methods-text-epoching__rep2"
+  },
+  {
+    "task": "preprocess-resample-events",
+    "skill": "eeg-preprocess",
+    "rep": 2,
+    "session": "skills66__preprocess-resample-events__rep2"
+  },
+  {
+    "task": "group-compare-one-way-f",
+    "skill": "eeg-group-compare",
+    "rep": 2,
+    "session": "skills66__group-compare-one-way-f__rep2"
+  },
+  {
+    "task": "stats-exact-sign-flip",
+    "skill": "eeg-stats",
+    "rep": 2,
+    "session": "skills66__stats-exact-sign-flip__rep2"
+  },
+  {
+    "task": "spectral-peak-frequency",
+    "skill": "eeg-spectral",
+    "rep": 2,
+    "session": "skills66__spectral-peak-frequency__rep2"
+  },
+  {
+    "task": "microstate-gev",
+    "skill": "eeg-microstate",
+    "rep": 2,
+    "session": "skills66__microstate-gev__rep2"
+  },
+  {
+    "task": "group-compare-welch-two-group",
+    "skill": "eeg-group-compare",
+    "rep": 2,
+    "session": "skills66__group-compare-welch-two-group__rep2"
+  },
+  {
+    "task": "source-ridge-inverse",
+    "skill": "eeg-source",
+    "rep": 2,
+    "session": "skills66__source-ridge-inverse__rep2"
+  },
+  {
+    "task": "tfr-morlet-itc",
+    "skill": "eeg-tfr",
+    "rep": 2,
+    "session": "skills66__tfr-morlet-itc__rep2"
+  },
+  {
+    "task": "behavior-identity-join",
+    "skill": "eeg-behavior",
+    "rep": 2,
+    "session": "skills66__behavior-identity-join__rep2"
+  },
+  {
+    "task": "epoch-event-lock",
+    "skill": "eeg-epoch",
+    "rep": 2,
+    "session": "skills66__epoch-event-lock__rep2"
+  },
+  {
+    "task": "tfr-baseline-logratio",
+    "skill": "eeg-tfr",
+    "rep": 2,
+    "session": "skills66__tfr-baseline-logratio__rep2"
+  },
+  {
+    "task": "recipe-missing-marker",
+    "skill": "eeg-recipe",
+    "rep": 2,
+    "session": "skills66__recipe-missing-marker__rep2"
+  },
+  {
+    "task": "audit-matched",
+    "skill": "eeg-audit",
+    "rep": 2,
+    "session": "skills66__audit-matched__rep2"
+  },
+  {
+    "task": "erp-condition-mean",
+    "skill": "eeg-erp",
+    "rep": 2,
+    "session": "skills66__erp-condition-mean__rep2"
+  },
+  {
+    "task": "recipe-meets-minimum",
+    "skill": "eeg-recipe",
+    "rep": 2,
+    "session": "skills66__recipe-meets-minimum__rep2"
+  },
+  {
+    "task": "report-include-missing",
+    "skill": "eeg-report",
+    "rep": 2,
+    "session": "skills66__report-include-missing__rep2"
+  },
+  {
+    "task": "ica-replay-none",
+    "skill": "eeg-ica",
+    "rep": 2,
+    "session": "skills66__ica-replay-none__rep2"
+  },
+  {
+    "task": "source-noise-normalized",
+    "skill": "eeg-source",
+    "rep": 2,
+    "session": "skills66__source-noise-normalized__rep2"
+  },
+  {
+    "task": "decoding-balanced-null",
+    "skill": "eeg-decoding",
+    "rep": 2,
+    "session": "skills66__decoding-balanced-null__rep2"
+  },
+  {
+    "task": "ica-remove-one",
+    "skill": "eeg-ica",
+    "rep": 2,
+    "session": "skills66__ica-remove-one__rep2"
+  },
+  {
+    "task": "bids-sample-origin",
+    "skill": "eeg-bids",
+    "rep": 2,
+    "session": "skills66__bids-sample-origin__rep2"
+  },
+  {
+    "task": "connectivity-pearson",
+    "skill": "eeg-connectivity",
+    "rep": 2,
+    "session": "skills66__connectivity-pearson__rep2"
+  },
+  {
+    "task": "connectivity-plv",
+    "skill": "eeg-connectivity",
+    "rep": 2,
+    "session": "skills66__connectivity-plv__rep2"
+  },
+  {
+    "task": "spectral-welch-band-power",
+    "skill": "eeg-spectral",
+    "rep": 2,
+    "session": "skills66__spectral-welch-band-power__rep2"
+  },
+  {
+    "task": "spectral-relative-power",
+    "skill": "eeg-spectral",
+    "rep": 2,
+    "session": "skills66__spectral-relative-power__rep2"
+  },
+  {
+    "task": "tfr-morlet-power",
+    "skill": "eeg-tfr",
+    "rep": 2,
+    "session": "skills66__tfr-morlet-power__rep2"
+  },
+  {
+    "task": "preprocess-reference",
+    "skill": "eeg-preprocess",
+    "rep": 2,
+    "session": "skills66__preprocess-reference__rep2"
+  },
+  {
+    "task": "source-strong-regularization",
+    "skill": "eeg-source",
+    "rep": 2,
+    "session": "skills66__source-strong-regularization__rep2"
+  },
+  {
+    "task": "epoch-trial-rejection",
+    "skill": "eeg-epoch",
+    "rep": 2,
+    "session": "skills66__epoch-trial-rejection__rep2"
+  },
+  {
+    "task": "pipeline-resume",
+    "skill": "eeg-pipeline",
+    "rep": 2,
+    "session": "skills66__pipeline-resume__rep2"
+  },
+  {
+    "task": "erp-fixed-window-roi",
+    "skill": "eeg-erp",
+    "rep": 2,
+    "session": "skills66__erp-fixed-window-roi__rep2"
+  },
+  {
+    "task": "behavior-correct-trial-rt",
+    "skill": "eeg-behavior",
+    "rep": 2,
+    "session": "skills66__behavior-correct-trial-rt__rep2"
+  },
+  {
+    "task": "complexity-sampen",
+    "skill": "eeg-complexity",
+    "rep": 2,
+    "session": "skills66__complexity-sampen__rep2"
+  },
+  {
+    "task": "methods-text-retained-and-seed",
+    "skill": "eeg-methods-text",
+    "rep": 2,
+    "session": "skills66__methods-text-retained-and-seed__rep2"
+  },
+  {
+    "task": "report-read-executed-seed",
+    "skill": "eeg-report",
+    "rep": 2,
+    "session": "skills66__report-read-executed-seed__rep2"
+  },
+  {
+    "task": "bids-signals",
+    "skill": "eeg-bids",
+    "rep": 2,
+    "session": "skills66__bids-signals__rep2"
+  },
+  {
+    "task": "figure-spectrum",
+    "skill": "eeg-figure",
+    "rep": 2,
+    "session": "skills66__figure-spectrum__rep2"
+  },
+  {
+    "task": "pipeline-blocked-stage",
+    "skill": "eeg-pipeline",
+    "rep": 2,
+    "session": "skills66__pipeline-blocked-stage__rep2"
+  },
+  {
+    "task": "pipeline-start",
+    "skill": "eeg-pipeline",
+    "rep": 2,
+    "session": "skills66__pipeline-start__rep2"
+  },
+  {
+    "task": "bids-channel-status",
+    "skill": "eeg-bids",
+    "rep": 2,
+    "session": "skills66__bids-channel-status__rep2"
+  },
+  {
+    "task": "qc-rapid-step",
+    "skill": "eeg-qc",
+    "rep": 2,
+    "session": "skills66__qc-rapid-step__rep2"
+  },
+  {
+    "task": "decoding-held-out-subjects",
+    "skill": "eeg-decoding",
+    "rep": 2,
+    "session": "skills66__decoding-held-out-subjects__rep2"
+  },
+  {
+    "task": "group-compare-paired-subjects",
+    "skill": "eeg-group-compare",
+    "rep": 2,
+    "session": "skills66__group-compare-paired-subjects__rep2"
+  },
+  {
+    "task": "report-recorded-summary",
+    "skill": "eeg-report",
+    "rep": 2,
+    "session": "skills66__report-recorded-summary__rep2"
+  },
+  {
+    "task": "stats-one-sample-t",
+    "skill": "eeg-stats",
+    "rep": 2,
+    "session": "skills66__stats-one-sample-t__rep2"
+  },
+  {
+    "task": "microstate-transitions",
+    "skill": "eeg-microstate",
+    "rep": 2,
+    "session": "skills66__microstate-transitions__rep2"
+  },
+  {
+    "task": "recipe-insufficient-trials",
+    "skill": "eeg-recipe",
+    "rep": 2,
+    "session": "skills66__recipe-insufficient-trials__rep2"
+  },
+  {
+    "task": "ica-remove-two",
+    "skill": "eeg-ica",
+    "rep": 2,
+    "session": "skills66__ica-remove-two__rep2"
+  },
+  {
+    "task": "figure-erp-wave",
+    "skill": "eeg-figure",
+    "rep": 2,
+    "session": "skills66__figure-erp-wave__rep2"
+  },
+  {
+    "task": "figure-delta-wave",
+    "skill": "eeg-figure",
+    "rep": 2,
+    "session": "skills66__figure-delta-wave__rep2"
+  },
+  {
+    "task": "audit-window",
+    "skill": "eeg-audit",
+    "rep": 2,
+    "session": "skills66__audit-window__rep2"
+  },
+  {
+    "task": "connectivity-debiased-wpli2",
+    "skill": "eeg-connectivity",
+    "rep": 2,
+    "session": "skills66__connectivity-debiased-wpli2__rep2"
+  },
+  {
+    "task": "methods-text-acquisition",
+    "skill": "eeg-methods-text",
+    "rep": 3,
+    "session": "skills66__methods-text-acquisition__rep3"
+  },
+  {
+    "task": "audit-unit-of-analysis",
+    "skill": "eeg-audit",
+    "rep": 3,
+    "session": "skills66__audit-unit-of-analysis__rep3"
+  },
+  {
+    "task": "behavior-response-assignment",
+    "skill": "eeg-behavior",
+    "rep": 3,
+    "session": "skills66__behavior-response-assignment__rep3"
+  },
+  {
+    "task": "epoch-baseline",
+    "skill": "eeg-epoch",
+    "rep": 3,
+    "session": "skills66__epoch-baseline__rep3"
+  },
+  {
+    "task": "decoding-held-out-blocks",
+    "skill": "eeg-decoding",
+    "rep": 3,
+    "session": "skills66__decoding-held-out-blocks__rep3"
+  },
+  {
+    "task": "qc-constant-channel",
+    "skill": "eeg-qc",
+    "rep": 3,
+    "session": "skills66__qc-constant-channel__rep3"
+  },
+  {
+    "task": "qc-clean",
+    "skill": "eeg-qc",
+    "rep": 3,
+    "session": "skills66__qc-clean__rep3"
+  },
+  {
+    "task": "microstate-coverage",
+    "skill": "eeg-microstate",
+    "rep": 3,
+    "session": "skills66__microstate-coverage__rep3"
+  },
+  {
+    "task": "preprocess-channels-and-crop",
+    "skill": "eeg-preprocess",
+    "rep": 3,
+    "session": "skills66__preprocess-channels-and-crop__rep3"
+  },
+  {
+    "task": "erp-signed-difference",
+    "skill": "eeg-erp",
+    "rep": 3,
+    "session": "skills66__erp-signed-difference__rep3"
+  },
+  {
+    "task": "stats-paired-effect",
+    "skill": "eeg-stats",
+    "rep": 3,
+    "session": "skills66__stats-paired-effect__rep3"
+  },
+  {
+    "task": "complexity-permutation-entropy",
+    "skill": "eeg-complexity",
+    "rep": 3,
+    "session": "skills66__complexity-permutation-entropy__rep3"
+  },
+  {
+    "task": "complexity-approximate-entropy",
+    "skill": "eeg-complexity",
+    "rep": 3,
+    "session": "skills66__complexity-approximate-entropy__rep3"
+  },
+  {
+    "task": "methods-text-epoching",
+    "skill": "eeg-methods-text",
+    "rep": 3,
+    "session": "skills66__methods-text-epoching__rep3"
+  },
+  {
+    "task": "preprocess-resample-events",
+    "skill": "eeg-preprocess",
+    "rep": 3,
+    "session": "skills66__preprocess-resample-events__rep3"
+  },
+  {
+    "task": "group-compare-one-way-f",
+    "skill": "eeg-group-compare",
+    "rep": 3,
+    "session": "skills66__group-compare-one-way-f__rep3"
+  },
+  {
+    "task": "stats-exact-sign-flip",
+    "skill": "eeg-stats",
+    "rep": 3,
+    "session": "skills66__stats-exact-sign-flip__rep3"
+  },
+  {
+    "task": "spectral-peak-frequency",
+    "skill": "eeg-spectral",
+    "rep": 3,
+    "session": "skills66__spectral-peak-frequency__rep3"
+  },
+  {
+    "task": "microstate-gev",
+    "skill": "eeg-microstate",
+    "rep": 3,
+    "session": "skills66__microstate-gev__rep3"
+  },
+  {
+    "task": "group-compare-welch-two-group",
+    "skill": "eeg-group-compare",
+    "rep": 3,
+    "session": "skills66__group-compare-welch-two-group__rep3"
+  },
+  {
+    "task": "source-ridge-inverse",
+    "skill": "eeg-source",
+    "rep": 3,
+    "session": "skills66__source-ridge-inverse__rep3"
+  },
+  {
+    "task": "tfr-morlet-itc",
+    "skill": "eeg-tfr",
+    "rep": 3,
+    "session": "skills66__tfr-morlet-itc__rep3"
+  },
+  {
+    "task": "behavior-identity-join",
+    "skill": "eeg-behavior",
+    "rep": 3,
+    "session": "skills66__behavior-identity-join__rep3"
+  },
+  {
+    "task": "epoch-event-lock",
+    "skill": "eeg-epoch",
+    "rep": 3,
+    "session": "skills66__epoch-event-lock__rep3"
+  },
+  {
+    "task": "tfr-baseline-logratio",
+    "skill": "eeg-tfr",
+    "rep": 3,
+    "session": "skills66__tfr-baseline-logratio__rep3"
+  },
+  {
+    "task": "recipe-missing-marker",
+    "skill": "eeg-recipe",
+    "rep": 3,
+    "session": "skills66__recipe-missing-marker__rep3"
+  },
+  {
+    "task": "audit-matched",
+    "skill": "eeg-audit",
+    "rep": 3,
+    "session": "skills66__audit-matched__rep3"
+  },
+  {
+    "task": "erp-condition-mean",
+    "skill": "eeg-erp",
+    "rep": 3,
+    "session": "skills66__erp-condition-mean__rep3"
+  },
+  {
+    "task": "recipe-meets-minimum",
+    "skill": "eeg-recipe",
+    "rep": 3,
+    "session": "skills66__recipe-meets-minimum__rep3"
+  },
+  {
+    "task": "report-include-missing",
+    "skill": "eeg-report",
+    "rep": 3,
+    "session": "skills66__report-include-missing__rep3"
+  },
+  {
+    "task": "ica-replay-none",
+    "skill": "eeg-ica",
+    "rep": 3,
+    "session": "skills66__ica-replay-none__rep3"
+  },
+  {
+    "task": "source-noise-normalized",
+    "skill": "eeg-source",
+    "rep": 3,
+    "session": "skills66__source-noise-normalized__rep3"
+  },
+  {
+    "task": "decoding-balanced-null",
+    "skill": "eeg-decoding",
+    "rep": 3,
+    "session": "skills66__decoding-balanced-null__rep3"
+  },
+  {
+    "task": "ica-remove-one",
+    "skill": "eeg-ica",
+    "rep": 3,
+    "session": "skills66__ica-remove-one__rep3"
+  },
+  {
+    "task": "bids-sample-origin",
+    "skill": "eeg-bids",
+    "rep": 3,
+    "session": "skills66__bids-sample-origin__rep3"
+  },
+  {
+    "task": "connectivity-pearson",
+    "skill": "eeg-connectivity",
+    "rep": 3,
+    "session": "skills66__connectivity-pearson__rep3"
+  },
+  {
+    "task": "connectivity-plv",
+    "skill": "eeg-connectivity",
+    "rep": 3,
+    "session": "skills66__connectivity-plv__rep3"
+  },
+  {
+    "task": "spectral-welch-band-power",
+    "skill": "eeg-spectral",
+    "rep": 3,
+    "session": "skills66__spectral-welch-band-power__rep3"
+  },
+  {
+    "task": "spectral-relative-power",
+    "skill": "eeg-spectral",
+    "rep": 3,
+    "session": "skills66__spectral-relative-power__rep3"
+  },
+  {
+    "task": "tfr-morlet-power",
+    "skill": "eeg-tfr",
+    "rep": 3,
+    "session": "skills66__tfr-morlet-power__rep3"
+  },
+  {
+    "task": "preprocess-reference",
+    "skill": "eeg-preprocess",
+    "rep": 3,
+    "session": "skills66__preprocess-reference__rep3"
+  },
+  {
+    "task": "source-strong-regularization",
+    "skill": "eeg-source",
+    "rep": 3,
+    "session": "skills66__source-strong-regularization__rep3"
+  },
+  {
+    "task": "epoch-trial-rejection",
+    "skill": "eeg-epoch",
+    "rep": 3,
+    "session": "skills66__epoch-trial-rejection__rep3"
+  },
+  {
+    "task": "pipeline-resume",
+    "skill": "eeg-pipeline",
+    "rep": 3,
+    "session": "skills66__pipeline-resume__rep3"
+  },
+  {
+    "task": "erp-fixed-window-roi",
+    "skill": "eeg-erp",
+    "rep": 3,
+    "session": "skills66__erp-fixed-window-roi__rep3"
+  },
+  {
+    "task": "behavior-correct-trial-rt",
+    "skill": "eeg-behavior",
+    "rep": 3,
+    "session": "skills66__behavior-correct-trial-rt__rep3"
+  },
+  {
+    "task": "complexity-sampen",
+    "skill": "eeg-complexity",
+    "rep": 3,
+    "session": "skills66__complexity-sampen__rep3"
+  },
+  {
+    "task": "methods-text-retained-and-seed",
+    "skill": "eeg-methods-text",
+    "rep": 3,
+    "session": "skills66__methods-text-retained-and-seed__rep3"
+  },
+  {
+    "task": "report-read-executed-seed",
+    "skill": "eeg-report",
+    "rep": 3,
+    "session": "skills66__report-read-executed-seed__rep3"
+  },
+  {
+    "task": "bids-signals",
+    "skill": "eeg-bids",
+    "rep": 3,
+    "session": "skills66__bids-signals__rep3"
+  },
+  {
+    "task": "figure-spectrum",
+    "skill": "eeg-figure",
+    "rep": 3,
+    "session": "skills66__figure-spectrum__rep3"
+  },
+  {
+    "task": "pipeline-blocked-stage",
+    "skill": "eeg-pipeline",
+    "rep": 3,
+    "session": "skills66__pipeline-blocked-stage__rep3"
+  },
+  {
+    "task": "pipeline-start",
+    "skill": "eeg-pipeline",
+    "rep": 3,
+    "session": "skills66__pipeline-start__rep3"
+  },
+  {
+    "task": "bids-channel-status",
+    "skill": "eeg-bids",
+    "rep": 3,
+    "session": "skills66__bids-channel-status__rep3"
+  },
+  {
+    "task": "qc-rapid-step",
+    "skill": "eeg-qc",
+    "rep": 3,
+    "session": "skills66__qc-rapid-step__rep3"
+  },
+  {
+    "task": "decoding-held-out-subjects",
+    "skill": "eeg-decoding",
+    "rep": 3,
+    "session": "skills66__decoding-held-out-subjects__rep3"
+  },
+  {
+    "task": "group-compare-paired-subjects",
+    "skill": "eeg-group-compare",
+    "rep": 3,
+    "session": "skills66__group-compare-paired-subjects__rep3"
+  },
+  {
+    "task": "report-recorded-summary",
+    "skill": "eeg-report",
+    "rep": 3,
+    "session": "skills66__report-recorded-summary__rep3"
+  },
+  {
+    "task": "stats-one-sample-t",
+    "skill": "eeg-stats",
+    "rep": 3,
+    "session": "skills66__stats-one-sample-t__rep3"
+  },
+  {
+    "task": "microstate-transitions",
+    "skill": "eeg-microstate",
+    "rep": 3,
+    "session": "skills66__microstate-transitions__rep3"
+  },
+  {
+    "task": "recipe-insufficient-trials",
+    "skill": "eeg-recipe",
+    "rep": 3,
+    "session": "skills66__recipe-insufficient-trials__rep3"
+  },
+  {
+    "task": "ica-remove-two",
+    "skill": "eeg-ica",
+    "rep": 3,
+    "session": "skills66__ica-remove-two__rep3"
+  },
+  {
+    "task": "figure-erp-wave",
+    "skill": "eeg-figure",
+    "rep": 3,
+    "session": "skills66__figure-erp-wave__rep3"
+  },
+  {
+    "task": "figure-delta-wave",
+    "skill": "eeg-figure",
+    "rep": 3,
+    "session": "skills66__figure-delta-wave__rep3"
+  },
+  {
+    "task": "audit-window",
+    "skill": "eeg-audit",
+    "rep": 3,
+    "session": "skills66__audit-window__rep3"
+  },
+  {
+    "task": "connectivity-debiased-wpli2",
+    "skill": "eeg-connectivity",
+    "rep": 3,
+    "session": "skills66__connectivity-debiased-wpli2__rep3"
+  }
+]

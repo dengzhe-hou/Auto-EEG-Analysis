@@ -1,0 +1,48 @@
+{
+  "task": {
+    "id": "complexity-approximate-entropy",
+    "skill": "eeg-complexity",
+    "operation": "approximate-entropy",
+    "request": "Calculate approximate entropy at m=2 using Chebyshev strict distance < 0.65 and self-matches. For each embedding length use all fitting windows and take the mean log neighbor fraction. Report phi_m, phi_m_plus_1, and approximate_entropy.",
+    "fields": [
+      "phi_m",
+      "phi_m_plus_1",
+      "approximate_entropy"
+    ]
+  },
+  "input": {
+    "series": [
+      0.4339545952405956,
+      -0.7324654744897858,
+      -1.0480071966003672,
+      0.8746570875957621,
+      -0.6976056598661257,
+      -0.4570898142357533,
+      0.4763988355695696,
+      2.0770574069320777,
+      -1.4318481027051275,
+      0.5735823221026182,
+      1.8713406461909845,
+      -1.148209449880327,
+      0.7906825786135732,
+      0.40846154979542026,
+      1.0563244297012828,
+      -1.2040124745542966,
+      -1.1040346856722656,
+      -0.9191469245289592,
+      2.6588461817317954,
+      -0.6239330803260107,
+      -0.6046994446399034,
+      -1.0582335657706823,
+      0.10818029112780245,
+      0.8559826831716839,
+      1.4334892447639696,
+      -1.1285167758823162,
+      2.0361509776746867,
+      2.1028878455591027,
+      -0.1667464370783448
+    ],
+    "m": 2,
+    "r": 0.65
+  }
+}

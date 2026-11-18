@@ -1,0 +1,33 @@
+{
+  "task": {
+    "id": "microstate-transitions",
+    "skill": "eeg-microstate",
+    "operation": "transitions",
+    "request": "Calculate the observed transition count and row-normalized probability matrices for labels 0\u20132. Skip adjacent repeats and all pairs touching -1, with no bridging gaps. Report counts and probabilities (source row, destination column).",
+    "fields": [
+      "counts",
+      "probabilities"
+    ]
+  },
+  "input": {
+    "labels": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      0,
+      2,
+      -1,
+      -1,
+      1,
+      0,
+      0,
+      1,
+      2
+    ]
+  }
+}

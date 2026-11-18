@@ -1,0 +1,7 @@
+{
+  "expected": {
+    "beta_fraction": 0.2098445595854924
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

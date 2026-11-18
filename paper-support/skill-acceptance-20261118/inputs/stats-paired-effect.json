@@ -1,0 +1,23 @@
+{
+  "task": {
+    "id": "stats-paired-effect",
+    "skill": "eeg-stats",
+    "operation": "paired-effect",
+    "request": "For the paired participant contrasts, compute Cohen dz with ddof=1, mean_difference and the two-sided 95% t interval ci95 on the mean.",
+    "fields": [
+      "dz",
+      "mean_difference",
+      "ci95"
+    ]
+  },
+  "input": {
+    "contrasts": [
+      0.7,
+      1.2,
+      -0.1,
+      1.1,
+      2.3,
+      1.8
+    ]
+  }
+}

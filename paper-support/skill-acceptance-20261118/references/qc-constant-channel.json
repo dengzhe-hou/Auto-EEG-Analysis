@@ -1,0 +1,13 @@
+{
+  "expected": {
+    "constant_channels": [
+      "Cz"
+    ],
+    "rapid_change_channels": [],
+    "bad_channel_candidates": [
+      "Cz"
+    ]
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

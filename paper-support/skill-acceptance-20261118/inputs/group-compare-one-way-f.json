@@ -1,0 +1,40 @@
+{
+  "task": {
+    "id": "group-compare-one-way-f",
+    "skill": "eeg-group-compare",
+    "operation": "one-way-f",
+    "request": "Test independent participant-level summaries using one-way between-subject ANOVA. Return statistic, p_value and n_per_group in input order. Each element is one participant value. Check the specified test path and unit of analysis; no cluster inference is assigned.",
+    "fields": [
+      "statistic",
+      "p_value",
+      "n_per_group"
+    ]
+  },
+  "input": {
+    "groups": [
+      [
+        1.0,
+        6.0,
+        3.0,
+        2.0,
+        3.0,
+        4.0,
+        3.5
+      ],
+      [
+        0.7,
+        1.0,
+        2.0,
+        2.6,
+        4.6
+      ],
+      [
+        0.9,
+        2.2,
+        2.3,
+        1.8,
+        1.3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "task": {
+    "id": "behavior-correct-trial-rt",
+    "skill": "eeg-behavior",
+    "operation": "correct-trial-rt",
+    "request": "Summarize accuracy over all trials and mean RT in ms over correct trials only, in order A, B. Report accuracy, mean_rt_ms, and retained_rt_trials as lists.",
+    "fields": [
+      "accuracy",
+      "mean_rt_ms",
+      "retained_rt_trials"
+    ]
+  },
+  "input": {
+    "condition": [
+      "A",
+      "B",
+      "A",
+      "B",
+      "A",
+      "B"
+    ],
+    "correct": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "rt_ms": [
+      325,
+      450,
+      250,
+      410,
+      365,
+      505
+    ]
+  }
+}

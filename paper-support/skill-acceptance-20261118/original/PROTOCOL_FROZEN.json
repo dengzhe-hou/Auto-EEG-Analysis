@@ -1,0 +1,30 @@
+{
+  "version": "06c6c44d6fcc11f0a4727b292588525b7ca83f1e",
+  "frozen_utc": "2026-11-18T04:48:05.545921+00:00",
+  "first_target_sessions_at_freeze": 0,
+  "authorization": {
+    "skills": 22,
+    "tasks": 66,
+    "reps": 3,
+    "sessions": 198,
+    "cap_usd": 5,
+    "model": "claude-haiku-5-5",
+    "thinking": "disabled",
+    "effort": "medium",
+    "allowed_workers": 1,
+    "paid_evaluator": false
+  },
+  "offline_job": "51130",
+  "methods_plan": "EXPERIMENT_PLAN.md",
+  "task_set": "TASKS.json",
+  "schedule": "SCHEDULE.json",
+  "references": "references",
+  "verifier": "accept.py",
+  "cpu_per_worker": 1,
+  "memory_gib": 4,
+  "max_workers": 1,
+  "shortest_routing_basis": "Verified available resources, prior one-route execution, Slurm serial throttle",
+  "time_limit_minutes_per_batch": 75,
+  "batches": 6,
+  "budget_basis": "existing metered Claude client with a dedicated USD 5 ledger"
+}

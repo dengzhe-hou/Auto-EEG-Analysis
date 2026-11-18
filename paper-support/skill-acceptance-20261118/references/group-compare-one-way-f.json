@@ -1,0 +1,13 @@
+{
+  "expected": {
+    "statistic": 1.95547958489678,
+    "p_value": 0.17826428546048345,
+    "n_per_group": [
+      7,
+      5,
+      5
+    ]
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

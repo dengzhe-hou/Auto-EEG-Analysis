@@ -1,0 +1,10 @@
+{
+  "formal_session_wall_seconds": 3645.0,
+  "total_cpu_seconds": 1460.451,
+  "allocated_cpu_seconds": 3645.0,
+  "cpu_efficiency_pct": 40.06724279835391,
+  "max_recorded_step_rss_kib": 990612,
+  "gpu_requested": 0,
+  "native_job_exit_codes_verified": true,
+  "same_shape_future_batch_timelimit_minutes": 19
+}

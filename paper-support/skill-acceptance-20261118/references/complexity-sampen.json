@@ -1,0 +1,9 @@
+{
+  "expected": {
+    "counts_m": 36,
+    "counts_m_plus_1": 7,
+    "sample_entropy": 1.6376087894007967
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

@@ -1,0 +1,12 @@
+{
+  "expected": {
+    "coverage_pct": [
+      40.0,
+      26.666666666666668,
+      33.333333333333336
+    ],
+    "n_labeled": 15
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

@@ -1,0 +1,7 @@
+{
+  "expected": {
+    "alpha_power_uV2": 1.2800000000000002
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

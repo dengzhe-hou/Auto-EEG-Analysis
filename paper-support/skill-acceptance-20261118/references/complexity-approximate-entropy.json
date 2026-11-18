@@ -1,0 +1,9 @@
+{
+  "expected": {
+    "phi_m": -2.0907572880300145,
+    "phi_m_plus_1": -2.7329804967013738,
+    "approximate_entropy": 0.6422232086713593
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

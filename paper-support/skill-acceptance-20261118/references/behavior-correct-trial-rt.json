@@ -1,0 +1,18 @@
+{
+  "expected": {
+    "accuracy": [
+      0.6666666666666666,
+      0.6666666666666666
+    ],
+    "mean_rt_ms": [
+      345.0,
+      430.0
+    ],
+    "retained_rt_trials": [
+      2,
+      2
+    ]
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

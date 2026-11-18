@@ -1,0 +1,44 @@
+{
+  "task": {
+    "id": "connectivity-pearson",
+    "skill": "eeg-connectivity",
+    "operation": "pearson",
+    "request": "Compute the off-diagonal Pearson correlations for the pairs Fz-Cz, Fz-Pz, Cz-Pz in that order and report edges. Use the whole supplied continuous signal with no preprocessing.",
+    "fields": [
+      "edges"
+    ]
+  },
+  "input": {
+    "channels": [
+      "Fz",
+      "Cz",
+      "Pz"
+    ],
+    "signal": [
+      [
+        1,
+        4,
+        5,
+        2,
+        8,
+        4
+      ],
+      [
+        4,
+        -2,
+        -3,
+        0,
+        -7,
+        -2
+      ],
+      [
+        2,
+        0,
+        4,
+        1,
+        8,
+        0
+      ]
+    ]
+  }
+}

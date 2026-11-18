@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "complete": true,
+  "assigned": 198,
+  "checked": 198,
+  "passed_deliveries": 192,
+  "failed_deliveries": 6,
+  "incomplete": 0,
+  "sessions_with_provider_packet_and_cgroup_witnesses": 198,
+  "target_api_cost_estimate_usd": 0.6397941,
+  "api_committed_usd": 0.6397940999999997,
+  "scope": "Reconciled scheduled first deliveries, fixed checks, metered usage and execution receipts"
+}

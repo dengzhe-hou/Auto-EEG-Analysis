@@ -1,0 +1,15 @@
+{
+  "expected": {
+    "sampling_hz": 250,
+    "reference": "FCz",
+    "retained_trials": 17,
+    "seed": 73,
+    "epoch_start_s": -0.1,
+    "epoch_end_s": 0.6
+  },
+  "atol": 1e-07,
+  "artifact": {
+    "kind": "methods",
+    "path": "methods.md"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "expected": {
+    "reused": [
+      "epoch",
+      "preprocess"
+    ],
+    "runnable": [
+      "erp",
+      "spectral"
+    ],
+    "blocked": [
+      "report"
+    ]
+  },
+  "atol": 1e-07,
+  "artifact": null
+}

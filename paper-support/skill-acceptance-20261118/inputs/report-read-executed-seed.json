@@ -1,0 +1,25 @@
+{
+  "task": {
+    "id": "report-read-executed-seed",
+    "skill": "eeg-report",
+    "operation": "read-executed-seed",
+    "request": "Write report.html and REPRO_RECEIPT.md from the supplied executed-stage record. Use an HTML element with id matching each required key and its value as plain text (use \"null\" for missing value); round continuous values to 3 decimals in HTML only. Include the literal source artifact filename and executed seed in the reproducibility receipt. Return result.json with the same four facts at full precision.",
+    "fields": [
+      "roi_mean_uV",
+      "n_trials",
+      "status",
+      "seed"
+    ],
+    "artifact": "report.html"
+  },
+  "input": {
+    "executed_stage": {
+      "roi_mean_uV": -1.465,
+      "n_trials": 45,
+      "status": "available",
+      "seed": 33
+    },
+    "source_file": "request.json",
+    "planned_seed": 7
+  }
+}

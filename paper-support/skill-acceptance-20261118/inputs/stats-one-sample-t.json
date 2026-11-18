@@ -1,0 +1,23 @@
+{
+  "task": {
+    "id": "stats-one-sample-t",
+    "skill": "eeg-stats",
+    "operation": "one-sample-t",
+    "request": "Test the six supplied participant contrasts against zero using a two-sided one-sample t test. Report t, df and p_two_sided. Keep the participant as the observation unit.",
+    "fields": [
+      "t",
+      "df",
+      "p_two_sided"
+    ]
+  },
+  "input": {
+    "contrasts": [
+      0.7,
+      1.2,
+      -0.1,
+      1.1,
+      2.3,
+      1.8
+    ]
+  }
+}

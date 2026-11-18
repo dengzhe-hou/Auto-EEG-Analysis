@@ -1,0 +1,31 @@
+{
+  "task": {
+    "id": "group-compare-welch-two-group",
+    "skill": "eeg-group-compare",
+    "operation": "welch-two-group",
+    "request": "Test independent participant-level summaries using two-sided independent Welch t test. Return statistic, p_value and n_per_group in input order. Each element is one participant value. Check the specified test path and unit of analysis; no cluster inference is assigned.",
+    "fields": [
+      "statistic",
+      "p_value",
+      "n_per_group"
+    ]
+  },
+  "input": {
+    "group_a": [
+      1.0,
+      6.0,
+      3.0,
+      2.0,
+      3.0,
+      4.0,
+      3.5
+    ],
+    "group_b": [
+      0.7,
+      1.0,
+      2.0,
+      2.6,
+      4.6
+    ]
+  }
+}

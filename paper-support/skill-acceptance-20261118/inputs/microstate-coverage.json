@@ -1,0 +1,33 @@
+{
+  "task": {
+    "id": "microstate-coverage",
+    "skill": "eeg-microstate",
+    "operation": "coverage",
+    "request": "Compute each state coverage as percent of labeled samples, in order 0,1,2. Return coverage_pct and n_labeled.",
+    "fields": [
+      "coverage_pct",
+      "n_labeled"
+    ]
+  },
+  "input": {
+    "labels": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      0,
+      2,
+      -1,
+      -1,
+      1,
+      0,
+      0,
+      1,
+      2
+    ]
+  }
+}
